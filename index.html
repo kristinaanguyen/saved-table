@@ -25,12 +25,12 @@
 </style></head><body>
 <header><a class="brand" href="./">saved table<span>by Kristina Nguyen</span></a><span class="concept">Independent Beli concept</span></header>
 <main><section class="intro"><p class="eyebrow">YOUR PLACES. YOUR NEXT PLAN.</p><h1>Somewhere good,<br>already saved.</h1><p>Rediscover your saved places. Keep your place, even when life interrupts.</p></section>
-<section class="workspace" aria-label="Restaurant explorer"><aside><div class="sectionhead"><h2>Your next stop</h2><button id="reset">Reset all</button></div><form id="destinationForm" class="destination-form"><label for="destinationQuery">Where are you headed?</label><div class="destination-input"><input id="destinationQuery" placeholder="Store or address, including city" maxlength="180" autocomplete="off"><button type="submit">Find</button></div><p class="search-disclosure">Searches Photon / OpenStreetMap when you press Find.</p><div id="destinationOptions"></div><p id="destinationFeedback" role="status"></p></form><button id="pickDestination" type="button" aria-pressed="false">Choose on map</button><p id="destinationSummary" class="destination-summary"></p><div id="stopList" class="stop-list" aria-label="Your planned stops"></div><button id="clearDestination" type="button" hidden>Clear all stops</button><label>City<select id="city"><option value="">All cities</option></select></label><label>Neighborhood<select id="neighborhood"><option value="">All neighborhoods</option></select></label><label>Cuisine<select id="cuisine"><option value="">Every craving</option><option value="family">Asian cuisines · inclusive group</option></select></label><details><summary>What's in “Asian cuisines”?</summary><p>For this prototype: Japanese, Korean, Cantonese, Chinese, Asian, Asian Fusion, Sushi, Shabu Shabu, Udon, Dim Sum, Poke, Matcha. A proposed grouping to test, not Beli’s taxonomy.</p></details><label>Budget<select id="price"><option value="">Any budget</option><option value="1">Up to $</option><option value="2">Up to $$</option><option value="3">Up to $$$</option></select></label><label>Find a saved place<input id="search" type="search" placeholder="Name, cuisine, or neighborhood"></label><section class="add-spot-section"><h2>Grow your collection</h2><p>Save a new restaurant in any city. Add its location and your own food photo.</p><button id="addPlace" class="add-place">+ Add a new spot</button><small>Saved on this browser · independent of Beli</small></section><div class="savebox"><span class="savedot"></span><div><strong>Your search stays with you.</strong><p id="storage">Filters and selection save on this browser.</p></div></div></aside>
+<section class="workspace" aria-label="Restaurant explorer"><aside><div class="sectionhead"><h2>Your next stop</h2><button id="reset">Reset all</button></div><form id="destinationForm" class="destination-form"><label for="destinationQuery">Where are you headed?</label><div class="destination-input"><input id="destinationQuery" placeholder="Store or address, including city" maxlength="180" autocomplete="off"><button type="submit">Find</button></div><p class="search-disclosure">Searches Photon / OpenStreetMap when you press Find.</p><div id="destinationOptions"></div><p id="destinationFeedback" role="status"></p></form><button id="pickDestination" type="button" aria-pressed="false">Choose on map</button><p id="destinationSummary" class="destination-summary"></p><div id="stopList" class="stop-list" aria-label="Your planned stops"></div><button id="clearDestination" type="button" hidden>Clear all stops</button><label>City<select id="city"><option value="">All cities</option></select></label><label>Neighborhood<select id="neighborhood"><option value="">All neighborhoods</option></select></label><label>Cuisine<select id="cuisine"><option value="">Every craving</option><option value="family">Asian cuisines · inclusive group</option></select></label><details><summary>What's in “Asian cuisines”?</summary><p>For this prototype: Japanese, Korean, Cantonese, Chinese, Asian, Asian Fusion, Sushi, Shabu Shabu, Udon, Dim Sum, Poke, Matcha. A proposed grouping to test, not Beli’s taxonomy.</p></details><label>Budget<select id="price"><option value="">Any budget</option><option value="1">Up to $</option><option value="2">Up to $$</option><option value="3">Up to $$$</option><option value="4">Up to $$$$</option></select></label><label>Find a saved place<input id="search" type="search" placeholder="Name, cuisine, or neighborhood"></label><section class="add-spot-section"><h2>Grow your collection</h2><p>Save a new restaurant in any city. Add its location and your own food photo.</p><button id="addPlace" class="add-place">+ Add a new spot</button><small>Saved on this browser · independent of Beli</small></section><div class="savebox"><span class="savedot"></span><div><strong>Your search stays with you.</strong><p id="storage">Filters and selection save on this browser.</p></div></div></aside>
 <div class="explorer"><div class="toolbar"><div><h2>Want to try <span id="count"></span></h2><p id="criteria">Your San Francisco collection</p></div><div class="switch"><button id="listView" aria-pressed="true">List</button><button id="mapView" aria-pressed="false">Map</button></div></div><p id="notice" role="status"></p><div id="mapPanel" hidden><div class="maptop"><span>YOUR SAVED PLACES · EVERYWHERE</span><button id="myLocation" type="button">◎ My location</button><button id="stopLocation" type="button" hidden>Stop GPS</button><button id="fitMap">Show all results</button><button id="retryMap">Retry map</button></div><div class="map-stage"><div id="map" aria-label="Interactive restaurant map"></div><button id="nearMeArrow" class="near-me-arrow" type="button" title="Show my location and nearby saved spots" aria-label="Show my location and nearby saved spots"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 14 21 10 14 3 10Z" fill="currentColor"/></svg><span>Near me</span></button></div><div class="location-preferences"><label><input id="rememberGPS" type="checkbox" checked> Resume GPS when I reopen</label><label><input id="followGPS" type="checkbox" checked> Keep map centered on me</label></div><p id="locationStatus" role="status"></p><p id="mapStatus" role="status">Loading street map…</p></div><section id="trayPanel" hidden aria-label="Compare restaurants on the map"><div class="tray-header"><div><strong>Something catch your eye?</strong><p id="trayHint"></p></div><div><button id="trayPrev" aria-label="Select previous restaurant">←</button><button id="trayNext" aria-label="Select next restaurant">→</button></div></div><div id="tray" aria-label="Restaurant photo cards"></div></section><div id="selected" hidden></div><div id="results"></div></div></section>
 <dialog id="photoDialog"><form id="photoForm"><div class="dialog-head"><h2 id="photoTitle">Food photo</h2><button type="button" id="closePhoto" aria-label="Close photo editor">×</button></div><input id="photoId" type="hidden"><p>Choose a clear, well-lit food photo from this restaurant. Your choice stays on this browser.</p><label>Upload your own photo<input id="photoFile" type="file" accept="image/*"></label><p class="or">or use a sourced image</p><label>Food photo URL<input id="photoUrl" type="url" placeholder="https://…"></label><label>Photo credit / source URL<input id="photoSource" type="url" placeholder="https://restaurant-website…"></label><p id="photoError" role="alert"></p><button type="submit" class="primary">Save food photo</button></form></dialog>
-<dialog id="placeDialog"><form id="placeForm"><div class="dialog-head"><h2>Add a new spot</h2><button type="button" id="closePlace" aria-label="Close new place form">×</button></div><p>Find a spot, choose its location, and save.</p><label>Search for a restaurant<input id="placeName" required autocomplete="off" placeholder="Restaurant, café, bar, or bakery…" aria-controls="placeLocationOptions" aria-describedby="placeSearchHint"></label><p id="placeSearchHint" class="search-disclosure">Food and drink suggestions appear after 3 letters. Cuisine and available price details are looked up after selection. Add a city to your search for better matches. Search uses Photon / OpenStreetMap.</p><div id="placeLocationOptions" aria-label="Suggested places"></div><p id="placeChosen" role="status"></p><details id="placeDetails"><summary>Add or edit details (optional)</summary><label>Cuisines, separated by commas<input id="placeCuisine" placeholder="Optional"></label><label>City / country<input id="placeCity" placeholder="Filled when you choose a result"></label><label>Neighborhood<input id="placeNeighborhood" placeholder="Optional"></label><label>Address<input id="placeAddress" placeholder="Full street address"></label><button id="lookupPlace" type="button">Search this address</button><label>Budget<select id="placePrice"><option value="0" selected>Not specified</option><option value="1">$</option><option value="2">$$</option><option value="3">$$$</option></select></label><label>Your food photo<input id="placeFile" type="file" accept="image/*"></label><details><summary>Map coordinates</summary><label>Latitude<input id="placeLat" type="number" step="any"></label><label>Longitude<input id="placeLon" type="number" step="any"></label></details></details><p id="placeError" role="alert"></p><button type="submit" class="primary">Save place</button></form></dialog><footer>27 places transcribed from your screenshots · Restaurant information is a dated snapshot.<br>Original SF saves use approximate Census address matches; new places use your chosen location · No live hours or walking estimates. Photos are credited to restaurant or identified sources; missing photos use labeled fallbacks.</footer></main><script defer src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script><script id="restaurant-data" type="application/json">{
-  "source": "User-supplied Beli screenshots, October 22, 2026. Transcribed snapshot; not independently verified.",
-  "limitations": "Price, cuisine, and neighborhood labels are screenshot snapshots. Addresses sourced separately; Census coordinates are approximate address-range matches, not entrances. No live hours or routing.",
+<dialog id="placeDialog"><form id="placeForm"><div class="dialog-head"><h2>Add a new spot</h2><button type="button" id="closePlace" aria-label="Close new place form">×</button></div><p>Find a spot, choose its location, and save.</p><label>Search for a restaurant<input id="placeName" required autocomplete="off" placeholder="Restaurant, café, bar, or bakery…" aria-controls="placeLocationOptions" aria-describedby="placeSearchHint"></label><p id="placeSearchHint" class="search-disclosure">Food and drink suggestions appear after 3 letters. Cuisine and available price details are looked up after selection. Add a city to your search for better matches. Search uses Photon / OpenStreetMap.</p><div id="placeLocationOptions" aria-label="Suggested places"></div><p id="placeChosen" role="status"></p><details id="placeDetails"><summary>Add or edit details (optional)</summary><label>Cuisines, separated by commas<input id="placeCuisine" placeholder="Optional"></label><label>City / country<input id="placeCity" placeholder="Filled when you choose a result"></label><label>Neighborhood<input id="placeNeighborhood" placeholder="Optional"></label><label>Address<input id="placeAddress" placeholder="Full street address"></label><button id="lookupPlace" type="button">Search this address</button><label>Budget<select id="placePrice"><option value="0" selected>Not specified</option><option value="1">$</option><option value="2">$$</option><option value="3">$$$</option></select></label><label>Your food photo<input id="placeFile" type="file" accept="image/*"></label><details><summary>Map coordinates</summary><label>Latitude<input id="placeLat" type="number" step="any"></label><label>Longitude<input id="placeLon" type="number" step="any"></label></details></details><p id="placeError" role="alert"></p><button type="submit" class="primary">Save place</button></form></dialog><footer>77 places transcribed from your screenshots · 50 new saves added October 23; exact locations pending verification · Restaurant information is a dated snapshot.<br>Original SF saves use approximate Census address matches; new places use your chosen location · No live hours or walking estimates. Photos are credited to restaurant or identified sources; missing photos use labeled fallbacks.</footer></main><script defer src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script><script id="restaurant-data" type="application/json">{
+  "source": "User-supplied Beli screenshots, October 22–23, 2026. Transcribed snapshot; not independently verified.",
+  "limitations": "Screenshot price/cuisine labels are dated snapshots. New October 23 records need exact address and coordinate verification before appearing on the map. Existing Census coordinates are approximate. No live hours or routing.",
   "restaurants": [
     {
       "id": "r01",
@@ -74,7 +74,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      }
     },
     {
       "id": "r02",
@@ -117,12 +122,17 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      }
     },
     {
       "id": "r03",
       "name": "Hwa Mi Won",
-      "priceTier": 2,
+      "priceTier": 3,
       "categories": [
         "Korean"
       ],
@@ -160,7 +170,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      }
     },
     {
       "id": "r04",
@@ -205,12 +220,17 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r05",
       "name": "Yoechee",
-      "priceTier": 2,
+      "priceTier": 3,
       "categories": [
         "Japanese",
         "Sushi"
@@ -227,7 +247,12 @@
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1552+Fillmore+St+San+Francisco+CA&benchmark=4&format=json",
       "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
       "checkedOn": "2026-10-22",
-      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported.",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r06",
@@ -271,7 +296,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r07",
@@ -317,7 +347,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r08",
@@ -338,12 +373,17 @@
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3100+16th+St+San+Francisco+CA&benchmark=4&format=json",
       "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
       "checkedOn": "2026-10-22",
-      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported.",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r09",
       "name": "Potto",
-      "priceTier": 2,
+      "priceTier": 3,
       "categories": [
         "Japanese",
         "Shabu Shabu"
@@ -382,12 +422,17 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r10",
       "name": "Ebiko",
-      "priceTier": 2,
+      "priceTier": 1,
       "categories": [
         "Japanese",
         "Sushi"
@@ -427,7 +472,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      }
     },
     {
       "id": "r11",
@@ -472,7 +522,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r12",
@@ -515,7 +570,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r13",
@@ -536,7 +596,12 @@
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3500+22nd+St+San+Francisco+CA&benchmark=4&format=json",
       "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
       "checkedOn": "2026-10-22",
-      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported.",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r14",
@@ -581,7 +646,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r15",
@@ -627,7 +697,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r16",
@@ -671,7 +746,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r17",
@@ -717,7 +797,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r18",
@@ -762,7 +847,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      }
     },
     {
       "id": "r19",
@@ -807,7 +897,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r20",
@@ -852,7 +947,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      }
     },
     {
       "id": "r21",
@@ -897,7 +997,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r22",
@@ -942,7 +1047,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r23",
@@ -986,12 +1096,17 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r24",
       "name": "Piccolo Forno",
-      "priceTier": 2,
+      "priceTier": 1,
       "categories": [
         "Italian"
       ],
@@ -1030,7 +1145,12 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      }
     },
     {
       "id": "r25",
@@ -1074,12 +1194,17 @@
           "hero": true,
           "editorialScore": 15
         }
-      ]
+      ],
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      }
     },
     {
       "id": "r26",
       "name": "Mama's Luncheonette",
-      "priceTier": 1,
+      "priceTier": 2,
       "categories": [
         "Breakfast",
         "Wraps",
@@ -1119,7 +1244,12 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      }
     },
     {
       "id": "r27",
@@ -1163,7 +1293,1006 @@
           "editorialScore": 15
         }
       ],
-      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      }
+    },
+    {
+      "id": "r28",
+      "name": "Dumplings Family",
+      "priceTier": 2,
+      "categories": [
+        "Dumplings",
+        "Chinese",
+        "Dim Sum"
+      ],
+      "neighborhood": "Southside",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Southside, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r29",
+      "name": "Kimchi Garden",
+      "priceTier": 2,
+      "categories": [
+        "Korean"
+      ],
+      "neighborhood": "Southside",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Southside, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r30",
+      "name": "Ox 9 Lanzhou Handpulled Noodles",
+      "priceTier": 2,
+      "categories": [
+        "Chinese",
+        "Noodles"
+      ],
+      "neighborhood": "Southside",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Southside, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r31",
+      "name": "Kiraku",
+      "priceTier": 3,
+      "categories": [
+        "Japanese",
+        "Sushi",
+        "Izakaya"
+      ],
+      "neighborhood": "South Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "South Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r32",
+      "name": "Tasty Pot",
+      "priceTier": 2,
+      "categories": [
+        "Bubble Tea",
+        "Hot Pot"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r33",
+      "name": "李面请大碗刀削面 Li's Knife Cut Noodle",
+      "priceTier": 2,
+      "categories": [
+        "Chinese",
+        "Noodles"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r34",
+      "name": "Eggy’s Neighborhood Kitchen",
+      "priceTier": 2,
+      "categories": [
+        "Brunch",
+        "Latin American"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r35",
+      "name": "Oori Rice Triangles",
+      "priceTier": 2,
+      "categories": [
+        "Asian",
+        "Korean",
+        "Japanese"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r36",
+      "name": "IPPUDO BERKELEY",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Ramen"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 1
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r37",
+      "name": "Nabolom Bakery - Pizzeria.",
+      "priceTier": 2,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "Elmwood",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Elmwood, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r38",
+      "name": "Lexie's Frozen Custard",
+      "priceTier": 1,
+      "categories": [
+        "Dessert"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r39",
+      "name": "Manpuku",
+      "priceTier": 1,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Elmwood",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Elmwood, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r40",
+      "name": "Sobo Ramen Berkeley",
+      "priceTier": 2,
+      "categories": [
+        "Japanese"
+      ],
+      "neighborhood": "Downtown Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Downtown Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r41",
+      "name": "Hashtag Poki",
+      "priceTier": 1,
+      "categories": [
+        "Poke"
+      ],
+      "neighborhood": "Elmwood",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Elmwood, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r42",
+      "name": "Emilia's Pizzeria",
+      "priceTier": 2,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "South Shattuck",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "South Shattuck, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r43",
+      "name": "Fava",
+      "priceTier": 0,
+      "categories": [],
+      "neighborhood": "Elmwood",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Elmwood, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification",
+      "importNote": "Two separately labeled screenshot records in different Berkeley neighborhoods; retained separately pending branch verification."
+    },
+    {
+      "id": "r44",
+      "name": "FAVA",
+      "priceTier": 2,
+      "categories": [
+        "Falafel",
+        "Mediterranean",
+        "Middle Eastern"
+      ],
+      "neighborhood": "North Shattuck",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "North Shattuck, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification",
+      "importNote": "Two separately labeled screenshot records in different Berkeley neighborhoods; retained separately pending branch verification."
+    },
+    {
+      "id": "r45",
+      "name": "Cheese Board Collective Pizzeria",
+      "priceTier": 1,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "North Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "North Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 2
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r46",
+      "name": "Tanzie's",
+      "priceTier": 2,
+      "categories": [
+        "Thai",
+        "Brunch"
+      ],
+      "neighborhood": "Poets Corner",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Poets Corner, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r47",
+      "name": "Butterfish Sushi",
+      "priceTier": 3,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Northwest Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Northwest Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r48",
+      "name": "Iyasare",
+      "priceTier": 3,
+      "categories": [
+        "Japanese",
+        "Ramen"
+      ],
+      "neighborhood": "Northwest Berkeley",
+      "city": "Berkeley",
+      "coordinates": null,
+      "address": "Northwest Berkeley, Berkeley, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r49",
+      "name": "Ebiko",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Piedmont Avenue",
+      "city": "Oakland",
+      "coordinates": null,
+      "address": "Piedmont Avenue, Oakland, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r50",
+      "name": "World Famous HOTBOYS Chicken",
+      "priceTier": 2,
+      "categories": [
+        "Southern",
+        "Fried Chicken"
+      ],
+      "neighborhood": "Downtown Oakland",
+      "city": "Oakland",
+      "coordinates": null,
+      "address": "Downtown Oakland, Oakland, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r51",
+      "name": "Delica",
+      "priceTier": 1,
+      "categories": [
+        "Asian Fusion",
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Embarcadero",
+      "city": "San Francisco",
+      "coordinates": null,
+      "address": "Embarcadero, San Francisco, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 3
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r52",
+      "name": "Wabi-Sabi SF",
+      "priceTier": 4,
+      "categories": [
+        "Japanese"
+      ],
+      "neighborhood": "China Basin",
+      "city": "San Francisco",
+      "coordinates": null,
+      "address": "China Basin, San Francisco, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r53",
+      "name": "Square Pie Guys",
+      "priceTier": 2,
+      "categories": [
+        "Pizza",
+        "Wings",
+        "American"
+      ],
+      "neighborhood": "SoMa",
+      "city": "San Francisco",
+      "coordinates": null,
+      "address": "SoMa, San Francisco, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 4
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r54",
+      "name": "Square Pie Guys",
+      "priceTier": 2,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "Walnut Creek",
+      "city": "Walnut Creek",
+      "coordinates": null,
+      "address": "Walnut Creek, Walnut Creek, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r55",
+      "name": "World Famous HOTBOYS Chicken",
+      "priceTier": 2,
+      "categories": [
+        "American",
+        "Fried Chicken"
+      ],
+      "neighborhood": "Walnut Creek",
+      "city": "Walnut Creek",
+      "coordinates": null,
+      "address": "Walnut Creek, Walnut Creek, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r56",
+      "name": "ANANAS",
+      "priceTier": 2,
+      "categories": [
+        "Coffee Shop",
+        "Matcha",
+        "Turkish"
+      ],
+      "neighborhood": "Walnut Creek",
+      "city": "Walnut Creek",
+      "coordinates": null,
+      "address": "Walnut Creek, Walnut Creek, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 5
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r57",
+      "name": "The Mess Hall Presidio",
+      "priceTier": 2,
+      "categories": [
+        "Korean",
+        "Seafood",
+        "Breakfast"
+      ],
+      "neighborhood": "Presidio of San Francisco",
+      "city": "San Francisco",
+      "coordinates": null,
+      "address": "Presidio of San Francisco, San Francisco, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r58",
+      "name": "Gilligans Poke Shop",
+      "priceTier": 3,
+      "categories": [
+        "Hawaiian",
+        "Poke"
+      ],
+      "neighborhood": "Sausalito",
+      "city": "Sausalito",
+      "coordinates": null,
+      "address": "Sausalito, Sausalito, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 6
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r59",
+      "name": "Paku",
+      "priceTier": 2,
+      "categories": [
+        "Japanese"
+      ],
+      "neighborhood": "West of Twin Peaks",
+      "city": "San Francisco",
+      "coordinates": null,
+      "address": "West of Twin Peaks, San Francisco, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r60",
+      "name": "YAYOI Palo Alto",
+      "priceTier": 2,
+      "categories": [
+        "Japanese"
+      ],
+      "neighborhood": "Downtown North",
+      "city": "Palo Alto",
+      "coordinates": null,
+      "address": "Downtown North, Palo Alto, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r61",
+      "name": "Yiaya Greek Yogurt",
+      "priceTier": 2,
+      "categories": [
+        "Frozen Yogurt",
+        "Greek"
+      ],
+      "neighborhood": "University South",
+      "city": "Palo Alto",
+      "coordinates": null,
+      "address": "University South, Palo Alto, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r62",
+      "name": "Sweet Maple",
+      "priceTier": 3,
+      "categories": [
+        "Breakfast",
+        "Brunch",
+        "Asian Fusion"
+      ],
+      "neighborhood": "University South",
+      "city": "Palo Alto",
+      "coordinates": null,
+      "address": "University South, Palo Alto, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r63",
+      "name": "Horsefeather Palo Alto",
+      "priceTier": 3,
+      "categories": [
+        "American",
+        "Fusion"
+      ],
+      "neighborhood": "Palo Alto",
+      "city": "Palo Alto",
+      "coordinates": null,
+      "address": "Palo Alto, Palo Alto, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 7
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r64",
+      "name": "Covour Coffee",
+      "priceTier": 2,
+      "categories": [
+        "Coffee",
+        "Matcha",
+        "Cafe"
+      ],
+      "neighborhood": "Midtown",
+      "city": "Palo Alto",
+      "coordinates": null,
+      "address": "Midtown, Palo Alto, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r65",
+      "name": "Ry's Poke Shack Mountain View",
+      "priceTier": 2,
+      "categories": [
+        "Hawaiian",
+        "Poke"
+      ],
+      "neighborhood": "Old Mountain View",
+      "city": "Mountain View",
+      "coordinates": null,
+      "address": "Old Mountain View, Mountain View, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r66",
+      "name": "Santo Market Inc",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Hawaiian",
+        "Poke"
+      ],
+      "neighborhood": "Central San Jose",
+      "city": "San Jose",
+      "coordinates": null,
+      "address": "Central San Jose, San Jose, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r67",
+      "name": "Pizza Antica",
+      "priceTier": 3,
+      "categories": [
+        "Pizza",
+        "Italian",
+        "American"
+      ],
+      "neighborhood": "The Villas",
+      "city": "San Jose",
+      "coordinates": null,
+      "address": "The Villas, San Jose, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r68",
+      "name": "Square Pie Guys",
+      "priceTier": 0,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "Balbach and SOFA",
+      "city": "San Jose",
+      "coordinates": null,
+      "address": "Balbach and SOFA, San Jose, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r69",
+      "name": "LOS TACOS DE MI TIERRA",
+      "priceTier": 2,
+      "categories": [
+        "Mexican",
+        "Tacos"
+      ],
+      "neighborhood": "Goodyear Mastic",
+      "city": "San Jose",
+      "coordinates": null,
+      "address": "Goodyear Mastic, San Jose, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r70",
+      "name": "Cali Spartan Mexican Kitchen",
+      "priceTier": 2,
+      "categories": [
+        "Mexican"
+      ],
+      "neighborhood": "Evergreen",
+      "city": "San Jose",
+      "coordinates": null,
+      "address": "Evergreen, San Jose, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r71",
+      "name": "Layla Bagels & Coffee Brentwood",
+      "priceTier": 2,
+      "categories": [
+        "Bagels"
+      ],
+      "neighborhood": "Brentwood",
+      "city": "Los Angeles",
+      "coordinates": null,
+      "address": "Brentwood, Los Angeles, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r72",
+      "name": "Layla Bagels & Coffee Beverly Hills",
+      "priceTier": 2,
+      "categories": [
+        "Bagels",
+        "Coffee"
+      ],
+      "neighborhood": "Beverly Hills",
+      "city": "Beverly Hills",
+      "coordinates": null,
+      "address": "Beverly Hills, Beverly Hills, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 8
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r73",
+      "name": "Layla Bagels",
+      "priceTier": 2,
+      "categories": [
+        "Bakery",
+        "Bagels"
+      ],
+      "neighborhood": "Sunset Park",
+      "city": "Santa Monica",
+      "coordinates": null,
+      "address": "Sunset Park, Santa Monica, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 9
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r74",
+      "name": "Odie's Pizza Co",
+      "priceTier": 2,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "Townsite",
+      "city": "Oceanside",
+      "coordinates": null,
+      "address": "Townsite, Oceanside, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 9
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r75",
+      "name": "Benedict's Brunch",
+      "priceTier": 2,
+      "categories": [
+        "Breakfast"
+      ],
+      "neighborhood": "Point Loma",
+      "city": "San Diego",
+      "coordinates": null,
+      "address": "Point Loma, San Diego, CA",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 9
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r76",
+      "name": "Don Angie",
+      "priceTier": 3,
+      "categories": [
+        "Italian"
+      ],
+      "neighborhood": "West Village",
+      "city": "Manhattan",
+      "coordinates": null,
+      "address": "West Village, Manhattan, NY",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 9
+      },
+      "locationStatus": "Needs exact branch/address verification"
+    },
+    {
+      "id": "r77",
+      "name": "Mimi's Frozen Yogurt",
+      "priceTier": 3,
+      "categories": [
+        "Frozen Yogurt",
+        "Dessert"
+      ],
+      "neighborhood": "Greenwich Village",
+      "city": "Manhattan",
+      "coordinates": null,
+      "address": "Greenwich Village, Manhattan, NY",
+      "photo": null,
+      "screenshotSource": {
+        "kind": "user-screenshot",
+        "batch": "2026-10-23",
+        "image": 9
+      },
+      "locationStatus": "Needs exact branch/address verification"
     }
   ]
 }
