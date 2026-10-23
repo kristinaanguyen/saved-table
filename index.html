@@ -1,0 +1,1279 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"><title>Saved Table · Find your next favorite</title><style>:root{--teal:#164f53;--ink:#19383a;--muted:#637573;--line:#dce4df;--cream:#f7f7ef}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}button,input,select{font:inherit}button,a,select,summary{cursor:pointer}button{background:white;border:1px solid var(--line);color:var(--teal);border-radius:10px;padding:9px 14px}button:hover{background:#e4efe7}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #af6829;outline-offset:3px}header{max-width:1400px;margin:auto;padding:24px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:700 30px Georgia,serif;color:var(--teal);text-decoration:none;letter-spacing:-1px}.brand span{display:block;font:11px/1.5 sans-serif;letter-spacing:1px;text-transform:uppercase;margin-top:3px}.concept{font-size:12px;border:1px solid #becfc7;border-radius:30px;padding:7px 12px}main{max-width:1400px;padding:0 5%;margin:auto}.intro{padding:38px 0 28px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;color:#617967}h1{font:normal clamp(38px,5vw,64px)/1.04 Georgia,serif;letter-spacing:-2px;margin:12px 0 16px}.intro>p:last-child{color:var(--muted);max-width:480px}.workspace{display:grid;grid-template-columns:270px 1fr;border:1px solid var(--line);background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 60px #1b463b08}aside{padding:24px;background:#f1f4ed;border-right:1px solid var(--line)}h2{font-size:17px;margin:0}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.sectionhead button{padding:4px 7px;font-size:12px;background:none;border:0;text-decoration:underline}label{display:block;font-size:12px;font-weight:650;margin:18px 0}select,input{display:block;width:100%;background:white;border:1px solid #c7d4ce;border-radius:9px;padding:12px 9px;margin-top:7px;color:var(--ink);font-size:14px}details{font-size:12px;color:#50645c}details p{line-height:1.6}.savebox{display:flex;gap:10px;margin-top:30px;padding-top:20px;border-top:1px solid #cedbd1;font-size:12px}.savebox p{margin:4px 0;color:var(--muted)}.savedot{width:8px;height:8px;border-radius:50%;background:#448057;flex-shrink:0;margin-top:6px}.explorer{padding:24px;min-width:0}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center}.toolbar p{margin:4px 0;color:var(--muted);font-size:12px}#count{font-size:12px;background:#edf2eb;border-radius:20px;padding:3px 8px;margin-left:6px}.switch{display:flex;gap:4px}.switch button{font-size:12px;padding:8px 10px}.switch [aria-pressed=true]{background:var(--teal);color:white;border-color:var(--teal)}#notice{font-size:12px;color:#356041;min-height:18px;margin:10px 0}#results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{display:block;text-align:left;padding:0;overflow:hidden;border-radius:13px;width:100%;color:var(--ink)}.card.active{outline:2px solid var(--teal);outline-offset:1px}.art{height:94px;background:linear-gradient(130deg,#e9e6d5,#d7e2d4);display:flex;align-items:center;justify-content:center;position:relative;color:#526657;font:italic 24px Georgia,serif}.art small{position:absolute;bottom:7px;right:9px;font:9px sans-serif;letter-spacing:1px}.card:nth-child(3n+2) .art{background:linear-gradient(130deg,#eadbd0,#f0e9dc)}.card:nth-child(3n) .art{background:linear-gradient(130deg,#d8e4e3,#edf1e5)}.body{padding:14px}.body h3{font-size:16px;margin:0 0 5px}.body p{font-size:12px;color:var(--muted);margin:4px 0}.body .bottom{display:flex;justify-content:space-between;margin-top:12px;font-size:11px;color:var(--teal)}#mapPanel{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:16px}.maplabel{background:#f1f4ed;padding:8px;font-size:9px;letter-spacing:1px;text-align:center}#map{padding:22px;min-height:240px;background:repeating-linear-gradient(0deg,transparent,transparent 36px,#fff 37px,#fff 41px),repeating-linear-gradient(90deg,#e7eee5,#e7eee5 55px,#fff 56px,#fff 60px);display:flex;flex-wrap:wrap;gap:16px;align-content:center}#map button{border:1px solid #719588;background:white;border-radius:20px;font-size:11px;box-shadow:0 2px 5px #0001}#map button[aria-pressed=true]{background:var(--teal);color:#fff}#selected{padding:15px;background:#edf3ed;border-radius:10px;margin-bottom:18px;font-size:13px}#selected button{float:right;font-size:11px;padding:5px 9px}footer{font-size:11px;color:var(--muted);padding:25px 0 40px;line-height:1.8}.empty{grid-column:1/-1;padding:45px 20px;text-align:center;background:#f7f8f3;border-radius:12px}.empty h3{margin:0 0 8px}@media(min-width:1100px){#results{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){header{padding:18px 5%}.brand{font-size:25px}.concept{font-size:9px;max-width:110px;text-align:center}.intro{padding-top:25px}h1{font-size:43px}.workspace{display:block}aside{border-right:0;border-bottom:1px solid var(--line);padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.sectionhead,.savebox,details{grid-column:1/-1}.sectionhead{margin-bottom:0}label{margin:9px 0}.savebox{margin-top:12px;padding-top:12px}.explorer{padding:16px}.toolbar{align-items:flex-start}#results{gap:11px}.body{padding:11px}.body h3{font-size:14px}.art{height:85px}.switch{flex-shrink:0}.switch button{padding:7px}.toolbar h2{font-size:15px}}
+/* Live map replaces the illustrative layout. */
+#map{display:block;position:relative;padding:0;background:#e6eee6;height:470px;min-height:320px;font:12px sans-serif}#map button{border-radius:0;font-size:12px;box-shadow:none}#map .maplibregl-popup-close-button{padding:0 6px;border:0;font-size:22px;background:white;color:var(--ink)}#mapPanel{position:relative}.maptop{display:flex;align-items:center;gap:7px;padding:9px 12px;background:#f1f4ed}.maptop span{font-size:9px;letter-spacing:1px;flex:1}.maptop button{padding:5px 8px;font-size:11px}#mapStatus{font-size:11px;line-height:1.5;margin:0;padding:9px 12px;color:#4c635b;background:#f5f7f1}.maplibregl-popup-content{padding:16px!important;border-radius:12px!important;color:var(--ink);max-height:330px;overflow:auto}.map-preview p{font-size:12px;margin:5px 0}.map-preview img{width:100%;height:115px;object-fit:cover;border-radius:7px;margin:7px 0}.popup-choice{font-weight:700;width:100%;text-align:left;border:0;background:#eff4ed!important;padding:9px!important;margin-top:5px;border-radius:5px!important}.art{overflow:hidden}.art img{width:100%;height:100%;object-fit:cover}.art small{background:#ffffffe6;padding:3px 5px;border-radius:3px;font-size:8px}.detail-links{display:flex;flex-wrap:wrap;gap:8px}.detail-links a{border:1px solid #b8cec0;border-radius:20px;padding:5px 10px;color:var(--teal);text-decoration:none;font-size:12px}.location-note{font-size:11px!important;color:#566b61}.maplibregl-ctrl-attrib a{color:#234d4e!important}#selected p{margin:8px 0}#map .maplibregl-ctrl-group button{width:30px;height:30px;padding:0}.maplibregl-canvas:focus-visible{outline:3px solid #af6829;outline-offset:-3px}@media(max-width:700px){#map{height:380px}.maptop{padding:8px}.maptop span{font-size:8px}.maptop button{font-size:10px}}
+/* Calm map: the saved places, not surrounding business labels, are the focus. */
+#mapPanel{border-radius:16px;border-color:#e3e8e1;box-shadow:0 5px 22px #17382e06}.maptop{background:#fafbf7;padding:12px}.maptop span{color:#6b7b73}.maptop button{border-radius:20px}.maplibregl-popup-content{padding:0!important;border-radius:16px!important;overflow:hidden;box-shadow:0 8px 30px #18382d26!important}.map-preview{padding-bottom:13px}.map-preview .popup-photo{position:relative;width:240px;height:125px;overflow:hidden;background:#e9eee4}.map-preview .popup-photo img{margin:0;width:100%;height:100%;object-fit:cover;border-radius:0}.map-preview .popup-choice{margin:10px 14px 0!important;padding:0!important;width:calc(100% - 28px);font-size:15px;text-align:left;line-height:1.3;background:transparent!important}.map-preview .popup-meta{margin:4px 14px;color:#68756c;font-size:11px}.popup-directions{display:inline-block;margin:4px 14px 0;font-size:11px;color:var(--teal)}#map .maplibregl-popup-close-button{z-index:4;right:7px;top:7px;border-radius:50%;background:#fffffff0;width:25px;height:25px;line-height:20px;font-size:20px}.shared-address{padding:10px 14px;margin:0!important;background:#f1f5ee}.art{position:relative;height:125px;display:block}.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo-fallback{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font:italic 22px Georgia,serif;background:linear-gradient(130deg,#eeecdf,#e0e8db);color:#5b705e}.photo-fallback small{position:static;background:none;font:11px sans-serif;letter-spacing:0}.photo-fallback[hidden]{display:none!important}.detail-links .edit-photo{font-size:12px;border-radius:20px;padding:5px 10px}.add-place{grid-column:1/-1;margin-top:8px;width:100%;border-color:#c6d4c8}.maplibregl-ctrl-group{border-radius:10px!important;box-shadow:0 2px 12px #18382d14!important}dialog{border:1px solid var(--line);border-radius:20px;width:min(480px,92vw);padding:25px;color:var(--ink);max-height:88vh;overflow:auto;background:#fafbf7}dialog::backdrop{background:#183a3455;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.dialog-head button{border:0;background:none;font-size:24px;padding:2px 9px}dialog p{font-size:13px;color:var(--muted)}dialog label{margin:12px 0}dialog input{background:white}dialog .primary{background:var(--teal);color:white;width:100%;margin-top:12px}#photoError,#placeError{color:#973c2d}.or{text-align:center;font-size:11px!important;margin:18px 0}#selected .detail-links{align-items:center}@media(max-width:700px){.art{height:115px}.map-preview .popup-photo{height:110px}dialog{padding:20px}}
+.photo-credit{position:absolute!important;bottom:0!important;left:0!important;right:0!important;background:#fffffff0!important;color:#4d6055;font:9px/1.35 -apple-system,sans-serif!important;padding:4px 7px!important;letter-spacing:0!important;text-align:right;border-radius:0!important}.photo-credit[hidden]{display:none!important}.popup-photo .photo-credit{font-size:8px!important}
+.destination-form,.destination-summary,#clearDestination{grid-column:1/-1}.destination-form{padding-bottom:10px;border-bottom:1px solid #d1ddd2}.destination-form>label{margin:0 0 7px;font-size:13px}.destination-input{display:flex;gap:6px}.destination-input input{min-width:0;margin:0}.destination-input button{background:var(--teal);color:white;border:0}.search-disclosure{font-size:10px;color:#6e7d71;margin:7px 0}.destination-summary{font-size:12px;color:var(--teal);margin:8px 0}.destination-option{display:block;text-align:left;width:100%;font-size:12px;margin-top:6px;background:white}#destinationFeedback{font-size:11px;color:#526a5c;margin:7px 0}#clearDestination{font-size:11px;padding:5px 9px;justify-self:start}#clearDestination[hidden]{display:none}#trayPanel{border:1px solid var(--line);border-radius:14px;margin:0 0 18px;overflow:hidden;background:#f8faf5}.tray-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px 5px}.tray-header strong{font-size:13px}.tray-header p{font-size:11px;color:var(--muted);margin:3px 0}.tray-header button{padding:5px 10px;border-radius:50%;font-size:14px}#tray{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 14px 16px;scroll-padding:14px}.tray-card{flex:0 0 210px;scroll-snap-align:center;padding:0;overflow:hidden;text-align:left;background:white;border-radius:12px}.tray-card.active{outline:2px solid var(--teal);outline-offset:1px}.tray-photo{height:115px;position:relative;overflow:hidden}.tray-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tray-body{padding:10px}.tray-body strong{font-size:13px;display:block}.tray-body p{font-size:11px;margin:5px 0;color:var(--muted)}.tray-body small{font-size:10px;color:var(--teal)}@media(max-width:700px){.destination-form{margin-top:12px}.tray-card{flex-basis:190px}.tray-photo{height:105px}.tray-header{align-items:flex-start}.tray-header>div:last-child{white-space:nowrap}}
+#pickDestination{grid-column:1/-1;font-size:12px;padding:8px 12px;margin-top:8px;border-radius:20px}#pickDestination[aria-pressed=true]{background:#b46d32;border-color:#b46d32;color:white}
+
+/* Saved locations are accessible DOM markers, independent of tile labels. */
+#map .saved-map-pin{width:17px;height:17px;min-width:17px;padding:0;border:3px solid white;border-radius:50%;background:#164f53;color:white;box-shadow:0 1px 5px #18382d55;font:bold 10px/17px sans-serif;cursor:pointer}
+#map .saved-map-pin:empty{font-size:0}#map .saved-map-pin:not(:empty){width:24px;height:24px}#map .saved-map-pin.active{background:#b46d32;width:23px;height:23px;z-index:2}#map .saved-map-pin:hover{background:#b46d32}#map .saved-map-pin:focus-visible{outline:3px solid #b46d32;outline-offset:3px}
+
+.stop-list{grid-column:1/-1;min-width:0}.stop-row{display:flex;gap:3px;align-items:center;margin:7px 0}.stop-row button{padding:5px;font-size:11px}.stop-row .stop-choice{flex:1;min-width:0;text-align:left;overflow-wrap:anywhere}.stop-choice[aria-pressed=true]{background:#f3e1ce;border-color:#b46d32}.stop-row button:disabled{opacity:.3;cursor:default}#map .stop-map-pin{border:2px solid white;border-radius:18px;background:#fff6eb;color:#8c4b1a;padding:6px 11px;font:bold 11px/1.3 sans-serif;box-shadow:0 2px 8px #18382d44;white-space:nowrap;z-index:3}#map .stop-map-pin.active{background:#a85d25;color:white;z-index:4}#map .stop-map-pin:after{content:'';position:absolute;left:calc(50% - 5px);bottom:-7px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #a85d25}
+
+.add-spot-section{grid-column:1/-1;border:1px solid #c6d4c8;background:#fff;border-radius:14px;padding:16px;margin-top:20px}.add-spot-section h2{font:22px Georgia,serif}.add-spot-section p{font-size:12px;color:var(--muted)}.add-spot-section small{display:block;font-size:10px;margin-top:9px;color:var(--muted)}.add-spot-section .add-place{background:var(--teal);color:white;margin-top:0}#placeLocationOptions{max-height:230px;overflow:auto}
+
+#placeChosen{font-size:13px;color:var(--teal);background:#edf3ed;border-radius:10px;padding:10px}#placeChosen:empty{display:none}#placeLocationOptions .destination-option{padding:13px;margin:6px 0}#placeDetails{margin-top:16px}#placeDetails summary{padding:10px 0}
+
+.mytop{flex-wrap:wrap}.maptop{flex-wrap:wrap}#locationStatus{font-size:11px;margin:0;padding:8px 12px;color:#276288;background:#eff7fc}#locationStatus:empty{display:none}#stopLocation[hidden]{display:none}.my-location-dot{width:18px;height:18px;border-radius:50%;background:#2188ec;border:3px solid white;box-shadow:0 0 0 9px #2188ec26,0 1px 6px #18382d66;z-index:5}
+
+.location-preferences{display:flex;flex-wrap:wrap;gap:8px 18px;padding:8px 12px;background:#f2f7f7}.location-preferences label{font-size:11px;margin:0;display:flex;gap:6px;align-items:center}.location-preferences input{display:inline;width:auto;margin:0;padding:0}
+
+.map-stage{position:relative}.near-me-arrow{position:absolute;right:16px;bottom:35px;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:68px;height:68px;border-radius:50%;background:white;color:#176a9c;border:1px solid #cbdce3;box-shadow:0 3px 15px #17382e33;padding:8px}.near-me-arrow span{font-size:10px;font-weight:700}.near-me-arrow:hover{background:#edf7ff}.my-location-dot:after{content:'You';position:absolute;left:50%;bottom:19px;transform:translateX(-50%);padding:3px 8px;border-radius:12px;background:#1676c8;color:white;font:bold 11px sans-serif;box-shadow:0 1px 5px #17382e22;white-space:nowrap}
+</style></head><body>
+<header><a class="brand" href="./">saved table<span>by Kristina Nguyen</span></a><span class="concept">Independent Beli concept</span></header>
+<main><section class="intro"><p class="eyebrow">YOUR PLACES. YOUR NEXT PLAN.</p><h1>Somewhere good,<br>already saved.</h1><p>Rediscover your saved places. Keep your place, even when life interrupts.</p></section>
+<section class="workspace" aria-label="Restaurant explorer"><aside><div class="sectionhead"><h2>Your next stop</h2><button id="reset">Reset all</button></div><form id="destinationForm" class="destination-form"><label for="destinationQuery">Where are you headed?</label><div class="destination-input"><input id="destinationQuery" placeholder="Store or address, including city" maxlength="180" autocomplete="off"><button type="submit">Find</button></div><p class="search-disclosure">Searches Photon / OpenStreetMap when you press Find.</p><div id="destinationOptions"></div><p id="destinationFeedback" role="status"></p></form><button id="pickDestination" type="button" aria-pressed="false">Choose on map</button><p id="destinationSummary" class="destination-summary"></p><div id="stopList" class="stop-list" aria-label="Your planned stops"></div><button id="clearDestination" type="button" hidden>Clear all stops</button><label>City<select id="city"><option value="">All cities</option></select></label><label>Neighborhood<select id="neighborhood"><option value="">All neighborhoods</option></select></label><label>Cuisine<select id="cuisine"><option value="">Every craving</option><option value="family">Asian cuisines · inclusive group</option></select></label><details><summary>What's in “Asian cuisines”?</summary><p>For this prototype: Japanese, Korean, Cantonese, Chinese, Asian, Asian Fusion, Sushi, Shabu Shabu, Udon, Dim Sum, Poke, Matcha. A proposed grouping to test, not Beli’s taxonomy.</p></details><label>Budget<select id="price"><option value="">Any budget</option><option value="1">Up to $</option><option value="2">Up to $$</option><option value="3">Up to $$$</option></select></label><label>Find a saved place<input id="search" type="search" placeholder="Name, cuisine, or neighborhood"></label><section class="add-spot-section"><h2>Grow your collection</h2><p>Save a new restaurant in any city. Add its location and your own food photo.</p><button id="addPlace" class="add-place">+ Add a new spot</button><small>Saved on this browser · independent of Beli</small></section><div class="savebox"><span class="savedot"></span><div><strong>Your search stays with you.</strong><p id="storage">Filters and selection save on this browser.</p></div></div></aside>
+<div class="explorer"><div class="toolbar"><div><h2>Want to try <span id="count"></span></h2><p id="criteria">Your San Francisco collection</p></div><div class="switch"><button id="listView" aria-pressed="true">List</button><button id="mapView" aria-pressed="false">Map</button></div></div><p id="notice" role="status"></p><div id="mapPanel" hidden><div class="maptop"><span>YOUR SAVED PLACES · EVERYWHERE</span><button id="myLocation" type="button">◎ My location</button><button id="stopLocation" type="button" hidden>Stop GPS</button><button id="fitMap">Show all results</button><button id="retryMap">Retry map</button></div><div class="map-stage"><div id="map" aria-label="Interactive restaurant map"></div><button id="nearMeArrow" class="near-me-arrow" type="button" title="Show my location and nearby saved spots" aria-label="Show my location and nearby saved spots"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 14 21 10 14 3 10Z" fill="currentColor"/></svg><span>Near me</span></button></div><div class="location-preferences"><label><input id="rememberGPS" type="checkbox" checked> Resume GPS when I reopen</label><label><input id="followGPS" type="checkbox" checked> Keep map centered on me</label></div><p id="locationStatus" role="status"></p><p id="mapStatus" role="status">Loading street map…</p></div><section id="trayPanel" hidden aria-label="Compare restaurants on the map"><div class="tray-header"><div><strong>Something catch your eye?</strong><p id="trayHint"></p></div><div><button id="trayPrev" aria-label="Select previous restaurant">←</button><button id="trayNext" aria-label="Select next restaurant">→</button></div></div><div id="tray" aria-label="Restaurant photo cards"></div></section><div id="selected" hidden></div><div id="results"></div></div></section>
+<dialog id="photoDialog"><form id="photoForm"><div class="dialog-head"><h2 id="photoTitle">Food photo</h2><button type="button" id="closePhoto" aria-label="Close photo editor">×</button></div><input id="photoId" type="hidden"><p>Choose a clear, well-lit food photo from this restaurant. Your choice stays on this browser.</p><label>Upload your own photo<input id="photoFile" type="file" accept="image/*"></label><p class="or">or use a sourced image</p><label>Food photo URL<input id="photoUrl" type="url" placeholder="https://…"></label><label>Photo credit / source URL<input id="photoSource" type="url" placeholder="https://restaurant-website…"></label><p id="photoError" role="alert"></p><button type="submit" class="primary">Save food photo</button></form></dialog>
+<dialog id="placeDialog"><form id="placeForm"><div class="dialog-head"><h2>Add a new spot</h2><button type="button" id="closePlace" aria-label="Close new place form">×</button></div><p>Find a spot, choose its location, and save.</p><label>Search for a restaurant<input id="placeName" required autocomplete="off" placeholder="Restaurant, café, bar, or bakery…" aria-controls="placeLocationOptions" aria-describedby="placeSearchHint"></label><p id="placeSearchHint" class="search-disclosure">Food and drink suggestions appear after 3 letters. Cuisine and available price details are looked up after selection. Add a city to your search for better matches. Search uses Photon / OpenStreetMap.</p><div id="placeLocationOptions" aria-label="Suggested places"></div><p id="placeChosen" role="status"></p><details id="placeDetails"><summary>Add or edit details (optional)</summary><label>Cuisines, separated by commas<input id="placeCuisine" placeholder="Optional"></label><label>City / country<input id="placeCity" placeholder="Filled when you choose a result"></label><label>Neighborhood<input id="placeNeighborhood" placeholder="Optional"></label><label>Address<input id="placeAddress" placeholder="Full street address"></label><button id="lookupPlace" type="button">Search this address</button><label>Budget<select id="placePrice"><option value="0" selected>Not specified</option><option value="1">$</option><option value="2">$$</option><option value="3">$$$</option></select></label><label>Your food photo<input id="placeFile" type="file" accept="image/*"></label><details><summary>Map coordinates</summary><label>Latitude<input id="placeLat" type="number" step="any"></label><label>Longitude<input id="placeLon" type="number" step="any"></label></details></details><p id="placeError" role="alert"></p><button type="submit" class="primary">Save place</button></form></dialog><footer>27 places transcribed from your screenshots · Restaurant information is a dated snapshot.<br>Original SF saves use approximate Census address matches; new places use your chosen location · No live hours or walking estimates. Photos are credited to restaurant or identified sources; missing photos use labeled fallbacks.</footer></main><script defer src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script><script id="restaurant-data" type="application/json">{
+  "source": "User-supplied Beli screenshots, October 22, 2026. Transcribed snapshot; not independently verified.",
+  "limitations": "Price, cuisine, and neighborhood labels are screenshot snapshots. Addresses sourced separately; Census coordinates are approximate address-range matches, not entrances. No live hours or routing.",
+  "restaurants": [
+    {
+      "id": "r01",
+      "name": "Butter & Crumble",
+      "priceTier": 3,
+      "categories": [
+        "Bakery",
+        "Cafe"
+      ],
+      "neighborhood": "North Beach",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.409599748258,
+        37.805108146844
+      ],
+      "photo": {
+        "url": "https://cdn.prod.website-files.com/65863f7a1744e63eb4ced648/65b152555fc0775ea537bd3a_BandC_pastries-5%20%282%29.jpeg",
+        "alt": "Pistachio croissant from Butter & Crumble",
+        "source": "https://www.butterandcrumble.com/products",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r01",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Butter & Crumble website"
+      },
+      "address": "271 Francisco St, San Francisco, CA",
+      "locationSource": "https://www.butterandcrumble.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=271+Francisco+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://cdn.prod.website-files.com/65863f7a1744e63eb4ced648/65b152555fc0775ea537bd3a_BandC_pastries-5%20%282%29.jpeg",
+          "alt": "Pistachio croissant from Butter & Crumble",
+          "source": "https://www.butterandcrumble.com/products",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r01",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r02",
+      "name": "Cotogna",
+      "priceTier": 3,
+      "categories": [
+        "Italian"
+      ],
+      "neighborhood": "North Beach",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.40351230998,
+        37.797376346184
+      ],
+      "photo": {
+        "url": "https://cdn.prod.website-files.com/5f459f0c5a592422059d2311/5fa37666f4bea940933f571e_2020-10-30%20Cotogna-Website-9533_2500px_.jpg",
+        "alt": "Pasta pictured on Cotogna’s website",
+        "source": "https://www.cotognasf.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r02",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Cotogna website"
+      },
+      "address": "490 Pacific Ave, San Francisco, CA",
+      "locationSource": "https://www.cotognasf.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=490+Pacific+Ave+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://cdn.prod.website-files.com/5f459f0c5a592422059d2311/5fa37666f4bea940933f571e_2020-10-30%20Cotogna-Website-9533_2500px_.jpg",
+          "alt": "Pasta pictured on Cotogna’s website",
+          "source": "https://www.cotognasf.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r02",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r03",
+      "name": "Hwa Mi Won",
+      "priceTier": 2,
+      "categories": [
+        "Korean"
+      ],
+      "neighborhood": "Central Richmond",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.487091598143,
+        37.780107354116
+      ],
+      "photo": {
+        "url": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto%2Cq_auto%3Abest%2Cc_fit%2Ch_1200/http%3A//static.spotapps.co/spots/f4/45178d11734ecd8578371dfe9e4bf6/%3Aoriginal",
+        "alt": "Braised short ribs featured by Hwa Mi Won",
+        "source": "https://hwamiwon.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r03",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Hwa Mi Won website"
+      },
+      "address": "6314 Geary Blvd, San Francisco, CA",
+      "locationSource": "https://hwamiwon.com/about",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=6314+Geary+Blvd+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto%2Cq_auto%3Abest%2Cc_fit%2Ch_1200/http%3A//static.spotapps.co/spots/f4/45178d11734ecd8578371dfe9e4bf6/%3Aoriginal",
+          "alt": "Braised short ribs featured by Hwa Mi Won",
+          "source": "https://hwamiwon.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r03",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r04",
+      "name": "Aji Kiji",
+      "priceTier": 3,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Chinatown",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.404212314985,
+        37.791291528679
+      ],
+      "photo": {
+        "url": "https://res.cloudinary.com/the-infatuation/image/upload/q_auto%2Cf_auto/images/MelissaZink-SF-AjiKiji-SushiBoxes-39_sbrmjz",
+        "alt": "Sushi boxes at Aji Kiji’s Kearny Street location",
+        "source": "https://www.theinfatuation.com/san-francisco/reviews/aji-kiji-kearny-st",
+        "credit": "Melissa Zink / The Infatuation",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r04",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "359 Kearny St, San Francisco, CA",
+      "locationSource": "https://www.toasttab.com/local/order/aji-kiji-359-kearny-street/item-togo-bag_9d1dabdb-5629-4cd4-ad08-40b3ff75b02d",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=359+Kearny+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/the-infatuation/image/upload/q_auto%2Cf_auto/images/MelissaZink-SF-AjiKiji-SushiBoxes-39_sbrmjz",
+          "alt": "Sushi boxes at Aji Kiji’s Kearny Street location",
+          "source": "https://www.theinfatuation.com/san-francisco/reviews/aji-kiji-kearny-st",
+          "credit": "Melissa Zink / The Infatuation",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r04",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r05",
+      "name": "Yoechee",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "Fillmore District",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.432698405123,
+        37.783628911651
+      ],
+      "photo": null,
+      "address": "1552 Fillmore St, San Francisco, CA",
+      "locationSource": "https://order.toasttab.com/online/yoeechee-1552-fillmore-street",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1552+Fillmore+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+    },
+    {
+      "id": "r06",
+      "name": "Kawanoya",
+      "priceTier": 2,
+      "categories": [
+        "Japanese"
+      ],
+      "neighborhood": "Noe Valley",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.426616757766,
+        37.74390366439
+      ],
+      "photo": {
+        "url": "https://cdn.hungryonion.org/original/4X/0/8/8/0884672b4d31bb98365828739a15127112118fc7.jpeg",
+        "alt": "Yakitori skewers at Kawanoya",
+        "source": "https://www.hungryonion.org/t/kawanoya-san-francisco-noe-valley/46994",
+        "credit": "Hungry Onion community review",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r06",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "1689 Church St, San Francisco, CA",
+      "locationSource": "https://www.noevalleyvoice.com/2026/March/202603.pdf",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1689+Church+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://cdn.hungryonion.org/original/4X/0/8/8/0884672b4d31bb98365828739a15127112118fc7.jpeg",
+          "alt": "Yakitori skewers at Kawanoya",
+          "source": "https://www.hungryonion.org/t/kawanoya-san-francisco-noe-valley/46994",
+          "credit": "Hungry Onion community review",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r06",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r07",
+      "name": "Jilli SF",
+      "priceTier": 3,
+      "categories": [
+        "Wine Bar",
+        "Korean",
+        "Asian Fusion"
+      ],
+      "neighborhood": "Mission District",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.417744160481,
+        37.766741649927
+      ],
+      "photo": {
+        "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_webp/images/LA_Jilli_RigatoniAllaKimchiVodka_JessieClapp-8_cjbxjm",
+        "alt": "Kimchi vodka rigatoni pictured in Jilli’s San Francisco review",
+        "source": "https://www.theinfatuation.com/san-francisco/reviews/jilli-15-th-st",
+        "credit": "Jessie Clapp / The Infatuation",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r07",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "1503 15th St, San Francisco, CA",
+      "locationSource": "https://www.eater.com/venue/920589/jilli",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1503+15th+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_webp/images/LA_Jilli_RigatoniAllaKimchiVodka_JessieClapp-8_cjbxjm",
+          "alt": "Kimchi vodka rigatoni pictured in Jilli’s San Francisco review",
+          "source": "https://www.theinfatuation.com/san-francisco/reviews/jilli-15-th-st",
+          "credit": "Jessie Clapp / The Infatuation",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r07",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r08",
+      "name": "Foodhall",
+      "priceTier": 2,
+      "categories": [
+        "Frozen Yogurt"
+      ],
+      "neighborhood": "Mission Dolores",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.421963823432,
+        37.764969762623
+      ],
+      "photo": null,
+      "address": "3100 16th St, San Francisco, CA",
+      "locationSource": "https://www.sanfranciscodowntown.com/Business/Foodhall/3100-16th-Street-San-Francisco-CA-94103",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3100+16th+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+    },
+    {
+      "id": "r09",
+      "name": "Potto",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Shabu Shabu"
+      ],
+      "neighborhood": "The Castro",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.430969437402,
+        37.764528414636
+      ],
+      "photo": {
+        "url": "https://img1.wsimg.com/isteam/ip/0d459fe9-e3c1-4126-80ff-5170aaacce13/IMG_7913.jpg/%3A/rs%3Dw%3A600%2Ch%3A300%2Ccg%3Atrue%2Cm/cr%3Dw%3A600%2Ch%3A300",
+        "alt": "Japanese specialties pictured by Potto",
+        "source": "https://potto.us/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r09",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Potto website"
+      },
+      "address": "290 Sanchez St, San Francisco, CA",
+      "locationSource": "https://potto.us/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=290+Sanchez+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/0d459fe9-e3c1-4126-80ff-5170aaacce13/IMG_7913.jpg/%3A/rs%3Dw%3A600%2Ch%3A300%2Ccg%3Atrue%2Cm/cr%3Dw%3A600%2Ch%3A300",
+          "alt": "Japanese specialties pictured by Potto",
+          "source": "https://potto.us/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r09",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r10",
+      "name": "Ebiko",
+      "priceTier": 2,
+      "categories": [
+        "Japanese",
+        "Sushi"
+      ],
+      "neighborhood": "SoMa",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.397574463045,
+        37.78968195399
+      ],
+      "photo": {
+        "url": "https://tb-static.uber.com/prod/image-proc/processed_images/55a46500301232676698ddc274d2a4dc/0e8f477e8f858732b95bd74b5e07a538.jpeg",
+        "alt": "Sushi spread from Ebiko’s SoMa ordering listing",
+        "source": "https://postmates.com/store/ebiko-sushi-soma-sf/0T-duGwkXdKmcDyyIT2Gtg",
+        "credit": "Ebiko / Postmates",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r10",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "100 1st St, San Francisco, CA",
+      "locationSource": "https://sf.eater.com/venue/112012/ebiko-2",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+1st+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance. SoMa / 1st Street branch, not the North Beach branch seen in Been.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://tb-static.uber.com/prod/image-proc/processed_images/55a46500301232676698ddc274d2a4dc/0e8f477e8f858732b95bd74b5e07a538.jpeg",
+          "alt": "Sushi spread from Ebiko’s SoMa ordering listing",
+          "source": "https://postmates.com/store/ebiko-sushi-soma-sf/0T-duGwkXdKmcDyyIT2Gtg",
+          "credit": "Ebiko / Postmates",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r10",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r11",
+      "name": "Shoji",
+      "priceTier": 3,
+      "categories": [
+        "Japanese",
+        "Cocktail Bar",
+        "Matcha"
+      ],
+      "neighborhood": "Yerba Buena",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.399975404685,
+        37.786929965825
+      ],
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/680d71f54ef02a1b3bd6cc1e/6c1f6f86-e997-4795-ad11-5bcf6502360f/-S1200x1800-FWEBP-3.webp",
+        "alt": "Donburi featured on Shoji’s website",
+        "source": "https://www.shojisf.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r11",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Shoji website"
+      },
+      "address": "140 New Montgomery St, San Francisco, CA",
+      "locationSource": "https://www.shojisf.com/faq",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=140+New+Montgomery+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/680d71f54ef02a1b3bd6cc1e/6c1f6f86-e997-4795-ad11-5bcf6502360f/-S1200x1800-FWEBP-3.webp",
+          "alt": "Donburi featured on Shoji’s website",
+          "source": "https://www.shojisf.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r11",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r12",
+      "name": "Sforno Pizzeria Napoletana",
+      "priceTier": 2,
+      "categories": [
+        "Pizza"
+      ],
+      "neighborhood": "Hayes Valley",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.424594422764,
+        37.77689407562
+      ],
+      "photo": {
+        "url": "https://d1w7312wesee68.cloudfront.net/xxL1-UL2Fza5pTJkNd5xC3WS5za94Up4KTUp6wh0t0w/resize%3Afit%3A720%3A720/plain/s3%3A//toasttab/menu_service/restaurants/8ad5e975-ff24-4be0-b477-d5d19cf2049e/MenuItem/c4b5bee4-4b83-46d6-9daf-6008227ecec6.jpg",
+        "alt": "Regina Margherita pizza from Sforno’s ordering page",
+        "source": "https://order.toasttab.com/online/sforno-514-octavia-street/item-regina-margherita_37c08ca3-2fd4-4694-9e5a-3b6fbc3ef354",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r12",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Sforno Pizzeria Napoletana website"
+      },
+      "address": "514 Octavia St, San Francisco, CA",
+      "locationSource": "https://sfstandard.com/2026/03/13/sforno-hayes-valley-pizzeria-oven-mortadella/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=514+Octavia+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://d1w7312wesee68.cloudfront.net/xxL1-UL2Fza5pTJkNd5xC3WS5za94Up4KTUp6wh0t0w/resize%3Afit%3A720%3A720/plain/s3%3A//toasttab/menu_service/restaurants/8ad5e975-ff24-4be0-b477-d5d19cf2049e/MenuItem/c4b5bee4-4b83-46d6-9daf-6008227ecec6.jpg",
+          "alt": "Regina Margherita pizza from Sforno’s ordering page",
+          "source": "https://order.toasttab.com/online/sforno-514-octavia-street/item-regina-margherita_37c08ca3-2fd4-4694-9e5a-3b6fbc3ef354",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r12",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r13",
+      "name": "Dolores Deluxe",
+      "priceTier": 1,
+      "categories": [
+        "Delicatessen"
+      ],
+      "neighborhood": "Dolores Heights",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.425609485018,
+        37.755078000055
+      ],
+      "photo": null,
+      "address": "3500 22nd St, San Francisco, CA",
+      "locationSource": "https://www.doloresdeluxe.com/events/all-pau-pop-up",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3500+22nd+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "No suitable identified food photo selected. Upload or sourced image URL supported."
+    },
+    {
+      "id": "r14",
+      "name": "La Taqueria",
+      "priceTier": 1,
+      "categories": [
+        "Mexican",
+        "Tacos"
+      ],
+      "neighborhood": "Mission District",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.418236241958,
+        37.750853057145
+      ],
+      "photo": {
+        "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_auto/images/La_Taqueria_Carne_Asada_Burrito_San_Francisco_Brittany_Finnegan-1_zcmz4a",
+        "alt": "Carne asada burrito from La Taqueria",
+        "source": "https://www.theinfatuation.com/san-francisco/guides/iconic-san-francisco-food",
+        "credit": "Brittany Finnegan / The Infatuation",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r14",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "2889 Mission St, San Francisco, CA",
+      "locationSource": "https://www.lataqueriasf.com/contact",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2889+Mission+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_auto/images/La_Taqueria_Carne_Asada_Burrito_San_Francisco_Brittany_Finnegan-1_zcmz4a",
+          "alt": "Carne asada burrito from La Taqueria",
+          "source": "https://www.theinfatuation.com/san-francisco/guides/iconic-san-francisco-food",
+          "credit": "Brittany Finnegan / The Infatuation",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r14",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r15",
+      "name": "Basa Seafood Express",
+      "priceTier": 1,
+      "categories": [
+        "Asian",
+        "Poke",
+        "Sushi"
+      ],
+      "neighborhood": "Mission District",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.413276660469,
+        37.752611604068
+      ],
+      "photo": {
+        "url": "https://basaseafoodsf.com/img/menu-items/spicycreamysalmonpoke.jpg",
+        "alt": "Spicy creamy salmon poke from Basa Seafood Express",
+        "source": "https://basaseafoodsf.com/menu.html",
+        "credit": "Basa Seafood Express",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r15",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "3064 24th St, San Francisco, CA",
+      "locationSource": "https://www.sanfranciscodowntown.com/Business/Basa-Seafood-Express/3064-24th-Street-San-Francisco-CA-94110",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3064+24th+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://basaseafoodsf.com/img/menu-items/spicycreamysalmonpoke.jpg",
+          "alt": "Spicy creamy salmon poke from Basa Seafood Express",
+          "source": "https://basaseafoodsf.com/menu.html",
+          "credit": "Basa Seafood Express",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r15",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r16",
+      "name": "Udon Mugizo",
+      "priceTier": 2,
+      "categories": [
+        "Udon",
+        "Japanese"
+      ],
+      "neighborhood": "Japantown",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.431489322134,
+        37.785179350529
+      ],
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/590970ce1e5b6c770b6a0ec6/1684733945533-AAUZS8K3Z9URDD54F4AI/untitled-1911.jpg",
+        "alt": "Udon with shrimp tempura, sliced pork, spinach and soft-boiled egg",
+        "source": "https://www.mugizo-us.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r16",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Udon Mugizo website"
+      },
+      "address": "1581 Webster St, San Francisco, CA",
+      "locationSource": "https://www.mugizo-us.com/sanfrancisco",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1581+Webster+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/590970ce1e5b6c770b6a0ec6/1684733945533-AAUZS8K3Z9URDD54F4AI/untitled-1911.jpg",
+          "alt": "Udon with shrimp tempura, sliced pork, spinach and soft-boiled egg",
+          "source": "https://www.mugizo-us.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r16",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r17",
+      "name": "Tano",
+      "priceTier": 3,
+      "categories": [
+        "Bakery",
+        "Asian",
+        "Korean"
+      ],
+      "neighborhood": "Rincon Hill",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.395780560444,
+        37.784886342111
+      ],
+      "photo": {
+        "url": "https://s.hdnux.com/photos/01/63/16/70/30207547/3/ratio3x2_1920.jpg",
+        "alt": "A box of Tano salt bread",
+        "source": "https://www.sfchronicle.com/food/restaurants/article/salt-bread-bay-area-21346033.php",
+        "credit": "San Francisco Chronicle",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r17",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "303 2nd St, San Francisco, CA",
+      "locationSource": "https://tanosf.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=303+2nd+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://s.hdnux.com/photos/01/63/16/70/30207547/3/ratio3x2_1920.jpg",
+          "alt": "A box of Tano salt bread",
+          "source": "https://www.sfchronicle.com/food/restaurants/article/salt-bread-bay-area-21346033.php",
+          "credit": "San Francisco Chronicle",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r17",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r18",
+      "name": "Good Luck Dim Sum",
+      "priceTier": 1,
+      "categories": [
+        "Cantonese",
+        "Dim Sum"
+      ],
+      "neighborhood": "Inner Richmond",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.466977818796,
+        37.782888092474
+      ],
+      "photo": {
+        "url": "https://s.hdnux.com/photos/01/31/12/24/23373076/3/1200x0.jpg",
+        "alt": "Dim sum from Good Luck Dim Sum in San Francisco",
+        "source": "https://www.sfgate.com/food/article/san-francisco-good-luck-dim-sum-lunar-new-year-17713978.php",
+        "credit": "SFGATE",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r18",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "736 Clement St, San Francisco, CA",
+      "locationSource": "https://sf.eater.com/venue/52769/good-luck-dim-sum",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=736+Clement+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://s.hdnux.com/photos/01/31/12/24/23373076/3/1200x0.jpg",
+          "alt": "Dim sum from Good Luck Dim Sum in San Francisco",
+          "source": "https://www.sfgate.com/food/article/san-francisco-good-luck-dim-sum-lunar-new-year-17713978.php",
+          "credit": "SFGATE",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r18",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r19",
+      "name": "SOHN",
+      "priceTier": 2,
+      "categories": [
+        "Korean",
+        "Cafe",
+        "Bakery"
+      ],
+      "neighborhood": "Dogpatch",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.388072612684,
+        37.757475575589
+      ],
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/684047fe6e7f3956c21a071e/252541e7-920b-4b86-81bc-664447b83d04/DSCF2946.jpg",
+        "alt": "Food and drinks pictured on SOHN’s website",
+        "source": "https://www.sohnsf.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r19",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "SOHN website"
+      },
+      "address": "2535 3rd St, San Francisco, CA",
+      "locationSource": "https://www.sohnsf.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2535+3rd+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/684047fe6e7f3956c21a071e/252541e7-920b-4b86-81bc-664447b83d04/DSCF2946.jpg",
+          "alt": "Food and drinks pictured on SOHN’s website",
+          "source": "https://www.sohnsf.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r19",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r20",
+      "name": "Constance Tea & Matcha",
+      "priceTier": 2,
+      "categories": [
+        "Tea",
+        "Matcha"
+      ],
+      "neighborhood": "Outer Richmond",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.496447646562,
+        37.775812669543
+      ],
+      "photo": {
+        "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_webp/Screenshot_2026-06-04_at_9.58.53_AM_akzinx",
+        "alt": "Three matcha lattes from Constance Tea & Matcha",
+        "source": "https://www.theinfatuation.com/san-francisco/reviews/constance-tea-and-matcha",
+        "credit": "Constance Tea & Matcha / The Infatuation",
+        "subject": "drink",
+        "verified": true,
+        "restaurantId": "r20",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "3512 Balboa St, San Francisco, CA",
+      "locationSource": "https://www.corner.inc/place/phATHwPRHdo8",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3512+Balboa+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill%2Cw_3840%2Car_4%3A3%2Cg_center%2Cf_webp/Screenshot_2026-06-04_at_9.58.53_AM_akzinx",
+          "alt": "Three matcha lattes from Constance Tea & Matcha",
+          "source": "https://www.theinfatuation.com/san-francisco/reviews/constance-tea-and-matcha",
+          "credit": "Constance Tea & Matcha / The Infatuation",
+          "subject": "drink",
+          "verified": true,
+          "restaurantId": "r20",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r21",
+      "name": "Paper Son Coffee",
+      "priceTier": 2,
+      "categories": [
+        "Coffee",
+        "Tea",
+        "Bakery"
+      ],
+      "neighborhood": "Rincon Hill",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.395780560444,
+        37.784886342111
+      ],
+      "photo": {
+        "url": "https://papersoncoffee.com/_next/image?q=75&url=%2F_next%2Fstatic%2Fmedia%2Fpastry_spread.430cfe9d.jpg&w=640",
+        "alt": "Pastry spread at Paper Son’s downtown shop",
+        "source": "https://papersoncoffee.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r21",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Paper Son Coffee website"
+      },
+      "address": "303 2nd St, San Francisco, CA",
+      "locationSource": "https://papersoncoffee.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=303+2nd+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://papersoncoffee.com/_next/image?q=75&url=%2F_next%2Fstatic%2Fmedia%2Fpastry_spread.430cfe9d.jpg&w=640",
+          "alt": "Pastry spread at Paper Son’s downtown shop",
+          "source": "https://papersoncoffee.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r21",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r22",
+      "name": "Horsefeather",
+      "priceTier": 3,
+      "categories": [
+        "American",
+        "Cocktail Bar"
+      ],
+      "neighborhood": "Alamo Square",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.437548179246,
+        37.774366891528
+      ],
+      "photo": {
+        "url": "https://d3emaq2p21aram.cloudfront.net/media/cache/venue_roundup_single_image_flex/uploads/Horsefeather-savoreachbite-01.jpg",
+        "alt": "Food and cocktails at Horsefeather in San Francisco",
+        "source": "https://www.venuereport.com/roundups/the-only-san-francisco-dining-and-drinking-guide-youll-ever-need",
+        "credit": "Venue Report / savoreachbite",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r22",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "528 Divisadero St, San Francisco, CA",
+      "locationSource": "https://horsefeather.com/sf/contact",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=528+Divisadero+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://d3emaq2p21aram.cloudfront.net/media/cache/venue_roundup_single_image_flex/uploads/Horsefeather-savoreachbite-01.jpg",
+          "alt": "Food and cocktails at Horsefeather in San Francisco",
+          "source": "https://www.venuereport.com/roundups/the-only-san-francisco-dining-and-drinking-guide-youll-ever-need",
+          "credit": "Venue Report / savoreachbite",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r22",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r23",
+      "name": "Wabi Sabi SF @TT",
+      "priceTier": 2,
+      "categories": [
+        "Sushi"
+      ],
+      "neighborhood": "Lower Nob Hill",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.420778068161,
+        37.789525790316
+      ],
+      "photo": {
+        "url": "https://tb-static.uber.com/prod/image-proc/processed_images/375440c38a563107e3ef4fe7445b89ca/c9252e6c6cd289c588c3381bc77b1dfc.jpeg",
+        "alt": "Sushi spread from Wabi Sabi’s Nob Hill listing",
+        "source": "https://www.ubereats.com/store/wabi-sabi-sf-at-nob-hill/hESjcZ4dU6qCbX2asMGixg",
+        "credit": "Wabi-Sabi / Uber Eats",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r23",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "1517 Pine St, San Francisco, CA",
+      "locationSource": "https://www.theinfatuation.com/san-francisco/reviews/wabi-sabi-sf-nob-hill",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1517+Pine+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance. Nob Hill branch selected based on screenshot neighborhood; @TT branch identity not confirmed.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://tb-static.uber.com/prod/image-proc/processed_images/375440c38a563107e3ef4fe7445b89ca/c9252e6c6cd289c588c3381bc77b1dfc.jpeg",
+          "alt": "Sushi spread from Wabi Sabi’s Nob Hill listing",
+          "source": "https://www.ubereats.com/store/wabi-sabi-sf-at-nob-hill/hESjcZ4dU6qCbX2asMGixg",
+          "credit": "Wabi-Sabi / Uber Eats",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r23",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r24",
+      "name": "Piccolo Forno",
+      "priceTier": 2,
+      "categories": [
+        "Italian"
+      ],
+      "neighborhood": "Russian Hill",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.411803245987,
+        37.801344397857
+      ],
+      "photo": {
+        "url": "https://tb-static.uber.com/prod/image-proc/processed_images/710d8fa5fab5741d0595d98cbc8945ab/fdf52d66534809b650058f41d517d74a.jpeg",
+        "alt": "Mushroom ravioli and salads from Piccolo Forno",
+        "source": "https://www.ubereats.com/store/piccolo-forno/RlaD_UTjSGSZvjc9RoreFQ",
+        "credit": "Piccolo Forno / Uber Eats",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r24",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "725 Columbus Ave, San Francisco, CA",
+      "locationSource": "https://piccolo-forno-sf.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=725+Columbus+Ave+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://tb-static.uber.com/prod/image-proc/processed_images/710d8fa5fab5741d0595d98cbc8945ab/fdf52d66534809b650058f41d517d74a.jpeg",
+          "alt": "Mushroom ravioli and salads from Piccolo Forno",
+          "source": "https://www.ubereats.com/store/piccolo-forno/RlaD_UTjSGSZvjc9RoreFQ",
+          "credit": "Piccolo Forno / Uber Eats",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r24",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r25",
+      "name": "Bottega",
+      "priceTier": 3,
+      "categories": [
+        "Italian"
+      ],
+      "neighborhood": "Mission District",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.420984732778,
+        37.754751029452
+      ],
+      "photo": {
+        "url": "https://tb-static.uber.com/prod/image-proc/processed_images/341de94986f0eaaf45e796845a2ffee8/c67fc65e9b4e16a553eb7574fba090f1.jpeg",
+        "alt": "Tomato-sauce pasta from Bottega Valencia",
+        "source": "https://www.ubereats.com/store/bottega/nLSGyGdQR3WjYo3XC3W5Xg",
+        "credit": "Bottega / Uber Eats",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r25",
+        "hero": true,
+        "editorialScore": 15
+      },
+      "address": "1132 Valencia St, San Francisco, CA",
+      "locationSource": "https://www.bottegavalencia.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1132+Valencia+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified",
+      "photos": [
+        {
+          "url": "https://tb-static.uber.com/prod/image-proc/processed_images/341de94986f0eaaf45e796845a2ffee8/c67fc65e9b4e16a553eb7574fba090f1.jpeg",
+          "alt": "Tomato-sauce pasta from Bottega Valencia",
+          "source": "https://www.ubereats.com/store/bottega/nLSGyGdQR3WjYo3XC3W5Xg",
+          "credit": "Bottega / Uber Eats",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r25",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ]
+    },
+    {
+      "id": "r26",
+      "name": "Mama's Luncheonette",
+      "priceTier": 1,
+      "categories": [
+        "Breakfast",
+        "Wraps",
+        "Brunch"
+      ],
+      "neighborhood": "Union Street",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.43215401378,
+        37.797622756699
+      ],
+      "photo": {
+        "url": "https://www.mamasluncheonette.com/_next/image?q=75&url=%2Fimages%2Fgallery-3.jpg&w=3840",
+        "alt": "Food pictured on Mama’s Luncheonette’s website",
+        "source": "https://www.mamasluncheonette.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r26",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "Mama's Luncheonette website"
+      },
+      "address": "3006 Buchanan St, San Francisco, CA",
+      "locationSource": "https://www.mamasluncheonette.com/",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3006+Buchanan+St+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://www.mamasluncheonette.com/_next/image?q=75&url=%2Fimages%2Fgallery-3.jpg&w=3840",
+          "alt": "Food pictured on Mama’s Luncheonette’s website",
+          "source": "https://www.mamasluncheonette.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r26",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    },
+    {
+      "id": "r27",
+      "name": "um.ma",
+      "priceTier": 2,
+      "categories": [
+        "Korean",
+        "Asian"
+      ],
+      "neighborhood": "Inner Sunset",
+      "city": "San Francisco",
+      "coordinates": [
+        -122.466337403944,
+        37.765484260992
+      ],
+      "photo": {
+        "url": "https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/ejshmlnf/81c871b6-a85d-4695-8b10-701a2efc6ffb.webp",
+        "alt": "Crispy Korean fried chicken sandwich from Um.Ma",
+        "source": "https://www.ummasf.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r27",
+        "hero": true,
+        "editorialScore": 15,
+        "credit": "um.ma website"
+      },
+      "address": "1220 9th Ave, San Francisco, CA",
+      "locationSource": "https://www.ummasf.com/reservations",
+      "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1220+9th+Ave+San+Francisco+CA&benchmark=4&format=json",
+      "locationNote": "Address geocoded using Census address ranges; approximate street position, not verified entrance.",
+      "checkedOn": "2026-10-22",
+      "photos": [
+        {
+          "url": "https://popmenucloud.com/cdn-cgi/image/width%3D600%2Cheight%3D600%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/ejshmlnf/81c871b6-a85d-4695-8b10-701a2efc6ffb.webp",
+          "alt": "Crispy Korean fried chicken sandwich from Um.Ma",
+          "source": "https://www.ummasf.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r27",
+          "hero": true,
+          "editorialScore": 15
+        }
+      ],
+      "photoResearchStatus": "source-linked candidate; availability not browser-verified"
+    }
+  ]
+}
+</script><script>// Reusable food-first selection. This ranks supplied, identified photos; it does
+// not search the web or pretend a generic image belongs to a restaurant.
+const photoOverridesKey='saved-table-photo-overrides-v1', customPlacesKey='saved-table-custom-places-v1';
+let photoOverrides={},customPlaces=[];
+function safeImageUrl(s){try{const u=new URL(s);return u.protocol==='https:'||(/^data:image\/(jpeg|png|webp);base64,/.test(s));}catch{return false;}}
+function safeSource(s){try{return new URL(s).protocol==='https:';}catch{return false;}}
+function loadPersonalPlaces(){try{const o=JSON.parse(localStorage.getItem(photoOverridesKey)||'{}');if(o&&typeof o==='object'&&!Array.isArray(o))photoOverrides=o;}catch{}try{const p=JSON.parse(localStorage.getItem(customPlacesKey)||'[]');if(Array.isArray(p))customPlaces=p.filter(r=>typeof r.id==='string'&&typeof r.name==='string'&&Array.isArray(r.categories)&&r.categories.every(c=>typeof c==='string')&&typeof r.neighborhood==='string'&&Number.isInteger(r.priceTier)&&r.priceTier>=0&&r.priceTier<=3).map(r=>({...r,categories:r.categories.filter(c=>c!=='Cuisine not specified'),coordinates:validCoordinates(r.coordinates)?r.coordinates:null}));}catch{}}
+function photoCandidates(r){const o=photoOverrides[r.id];const candidates=[...(o?[o]:[]),...(Array.isArray(r.photos)?r.photos:[]),...(r.photo?[{...r.photo,subject:r.photo.subject||'food',verified:r.photo.verified===true}]:[])];const seen=new Set();return candidates.filter(p=>p&&safeImageUrl(p.url)&&p.verified===true&&['food','drink'].includes(p.subject)&&(!p.restaurantId||p.restaurantId===r.id)).filter(p=>{if(seen.has(p.url))return false;seen.add(p.url);return true;}).sort((a,b)=>{const score=p=>(p===o?1000:0)+(p.subject==='food'?100:70)+(p.hero===true?30:0)+Math.max(0,Math.min(20,Number(p.editorialScore)||0));return score(b)-score(a);});}
+function photoElement(r,className='art'){const box=tag('div',className);const fallback=tag('div','photo-fallback');const title=tag('span');title.textContent=r.categories[0]||'Saved place';const note=tag('small');note.textContent='Add a food photo';fallback.append(title,note);box.append(fallback);const credit=tag('small','photo-credit');credit.hidden=true;box.append(credit);const candidates=photoCandidates(r);let index=0;function tryNext(){if(index>=candidates.length)return;const p=candidates[index++],im=tag('img');im.alt=p.alt||'Food at '+r.name;im.loading='lazy';im.decoding='async';im.referrerPolicy='strict-origin-when-cross-origin';im.onload=()=>{fallback.hidden=true;credit.textContent=p.credit||'Photo selected for '+r.name;credit.hidden=false;};im.onerror=()=>{im.remove();fallback.hidden=false;credit.hidden=true;tryNext();};im.src=p.url;box.append(im);}tryNext();return box;}
+async function filePhoto(file){if(!file.type.startsWith('image/')||file.size>12*1024*1024)throw Error('Choose an image under 12 MB.');const url=await new Promise((resolve,reject)=>{const f=new FileReader();f.onload=()=>resolve(f.result);f.onerror=reject;f.readAsDataURL(file);});const img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(Error('This image format could not be opened. Try JPEG or PNG.'));i.src=url;});const scale=Math.min(1,1200/img.width,1200/img.height),canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);return canvas.toDataURL('image/jpeg',0.82);}
+function openPhotoEditor(r){$('photoId').value=r.id;$('photoTitle').textContent='Food photo · '+r.name;$('photoUrl').value='';$('photoSource').value='';$('photoFile').value='';$('photoError').textContent='';$('photoDialog').showModal();}
+async function savePhoto(e){e.preventDefault();const id=$('photoId').value,r=records.find(x=>x.id===id);if(!r)return;try{const f=$('photoFile').files[0];const url=f?await filePhoto(f):$('photoUrl').value.trim();if(!safeImageUrl(url))throw Error('Upload a photo or enter an HTTPS image URL.');const source=$('photoSource').value.trim();if(source&&!safeSource(source))throw Error('Use an HTTPS source link.');const p={url,source:source||null,alt:'Food photo selected for '+r.name,subject:'food',verified:true,restaurantId:id,hero:true};const next={...photoOverrides,[id]:p};localStorage.setItem(photoOverridesKey,JSON.stringify(next));photoOverrides=next;render();showMapSelection(r,false);$('photoDialog').close();$('notice').textContent='Photo saved in this browser.';}catch(err){$('photoError').textContent=err.message||'Photo could not save. Browser storage may be full.';}}
+function rebuildFilterOptions(){$('city').replaceChildren(new Option('All cities',''));for(const c of [...new Set(records.map(r=>r.city).filter(Boolean))].sort())$('city').add(new Option(c,c));for(const [id,vals]of [['neighborhood',[...new Set(records.map(r=>r.neighborhood))].sort()],['cuisine',[...new Set(records.flatMap(r=>r.categories))].sort()]])for(const v of vals)if(![...$(id).options].some(o=>o.value===v))$(id).add(new Option(v,v));}
+async function saveNewPlace(e){e.preventDefault();try{await pendingPlaceEnrichment;const name=$('placeName').value.trim(),categories=$('placeCuisine').value.split(',').map(x=>x.trim()).filter(Boolean),neighborhood=$('placeNeighborhood').value.trim()||$('placeCity').value.trim();if(!name)throw Error('Enter a restaurant name.');const address=$('placeAddress').value.trim(),city=$('placeCity').value.trim();if(!city)throw Error('Add a city so you can find this spot later.');const lat=$('placeLat').value,lon=$('placeLon').value;let coordinates=null;if(lat||lon){if(!lat||!lon||!Number.isFinite(Number(lat))||!Number.isFinite(Number(lon))||!validCoordinates([Number(lon),Number(lat)]))throw Error('Enter valid latitude and longitude, or use Look up address.');coordinates=[Number(lon),Number(lat)];}if(records.some(r=>r.name.toLowerCase()===name.toLowerCase()&&r.city.toLowerCase()===city.toLowerCase()&&(!coordinates||!r.coordinates||straightLineMiles(coordinates,r.coordinates)<0.05)))throw Error('This spot is already saved in your collection.');const id='custom-'+Date.now()+'-'+Math.random().toString(36).slice(2,8),r={id,name,categories,neighborhood,city,priceTier:Number($('placePrice').value),address:address||neighborhood+', '+city,coordinates,photo:null,metadataSource:selectedPlaceMetadata?.source||null,metadataCheckedAt:selectedPlaceMetadata?.checkedAt||null};const f=$('placeFile').files[0];if(f)r.photo={url:await filePhoto(f),alt:'Personal food photo for '+name,source:null,subject:'food',verified:true};const next=[...customPlaces,r];localStorage.setItem(customPlacesKey,JSON.stringify(next));customPlaces=next;records.push(r);rebuildFilterOptions();state.city=city;$('city').value=city;state.neighborhood='';state.cuisine='';state.price='';state.search='';for(const k of ['neighborhood','cuisine','price','search'])$(k).value='';state.selected=id;state.view='map';render();save();if(coordinates){fitPlaces();showMapSelection(r,true);}$('placeDialog').close();$('placeForm').reset();$('notice').textContent=coordinates?'Place saved in this browser.':'Place saved to your list. Add coordinates before it can appear on the map.';}catch(err){$('placeError').textContent=err.message||'Could not save. Browser storage may be full.';}}
+
+const foodDrinkTags={amenity:new Set(['restaurant','cafe','bar','pub','fast_food','food_court','ice_cream','biergarten']),shop:new Set(['bakery','pastry','coffee','tea','ice_cream','confectionery','deli'])};
+function isFoodDrinkPlace(f){const p=f?.properties;return !!p&&foodDrinkTags[p.osm_key]?.has(p.osm_value)===true;}
+function foodDrinkLabel(p){return p.osm_value.replaceAll('_',' ').replace(/\b\w/g,c=>c.toUpperCase());}
+let placeLookupVersion=0,placeTypeTimer=null,placeController=null;
+function placeNameChanged(){selectedPlaceMetadata=null;pendingPlaceEnrichment=null;clearTimeout(placeTypeTimer);placeController?.abort();placeLookupVersion++;for(const id of ['placeLat','placeLon','placeAddress','placeCity','placeNeighborhood','placeCuisine'])$(id).value='';$('placeLocationOptions').replaceChildren();$('placeChosen').textContent='';const q=$('placeName').value.trim();$('placeError').textContent=q.length<3?'Type at least 3 letters to see suggestions.':'';if(q.length>=3)placeTypeTimer=setTimeout(()=>lookupNewPlace(true),450);}
+async function lookupNewPlace(typeahead=false){clearTimeout(placeTypeTimer);const name=$('placeName').value.trim(),address=$('placeAddress').value.trim(),city=$('placeCity').value.trim();const q=typeahead?name:[address||name,city].filter(Boolean).join(', ');if(q.length<3)return;placeController?.abort();const version=++placeLookupVersion,controller=new AbortController();placeController=controller;const timer=setTimeout(()=>controller.abort(),8000);$('placeLocationOptions').replaceChildren();$('placeError').textContent='Finding suggestions…';try{const url=new URL('https://photon.komoot.io/api/');const params={q,limit:'6',lang:'en'};const center=liveMap?.getCenter();if(center){params.lon=String(center.lng);params.lat=String(center.lat);}const searchParams=new URLSearchParams(params);for(const [key,values] of Object.entries(foodDrinkTags))for(const value of values)searchParams.append('osm_tag',key+':'+value);url.search=searchParams;const response=await fetch(url,{signal:controller.signal});if(!response.ok)throw Error();const data=await response.json();if(version!==placeLookupVersion)return;const seen=new Set(),candidates=(data.features||[]).filter(f=>{const p=f.properties||{},c=f.geometry?.coordinates;if(!p.name||!validCoordinates(c)||!isFoodDrinkPlace(f))return false;const key=p.name+c.join(',');if(seen.has(key))return false;seen.add(key);return true;});$('placeError').textContent=candidates.length?'Choose the correct spot below.':'No food or drink spots found. Try the restaurant name plus its city, or add it manually under details.';for(const f of candidates){const prop=f.properties||{},label=[prop.name,[prop.housenumber,prop.street].filter(Boolean).join(' '),prop.city||prop.town||prop.village,prop.country].filter(Boolean).join(' · '),b=tag('button','destination-option');b.type='button';b.textContent=prop.name+' · '+foodDrinkLabel(prop)+' — '+[prop.street,prop.city||prop.town||prop.village,prop.country].filter(Boolean).join(', ');b.onclick=()=>{placeLookupVersion++;placeController?.abort();$('placeName').value=prop.name;$('placeLat').value=f.geometry.coordinates[1];$('placeLon').value=f.geometry.coordinates[0];$('placeCity').value=prop.city||prop.town||prop.village||prop.county||prop.state||prop.country||'Location selected';$('placeNeighborhood').value=prop.district||prop.suburb||prop.city||'';$('placeAddress').value=[prop.housenumber,prop.street,prop.city,prop.state,prop.country].filter(Boolean).join(' ');$('placeLocationOptions').replaceChildren();$('placeChosen').textContent='✓ '+label;$('placeError').textContent='Checking cuisine and published price details…';const selectionVersion=placeLookupVersion;pendingPlaceEnrichment=enrichSelectedPlace(f,selectionVersion);};$('placeLocationOptions').append(b);}}catch{if(version===placeLookupVersion)$('placeError').textContent='Suggestions are unavailable right now. Try again or open details to add this spot manually.';}finally{clearTimeout(timer);}}
+function priceLabel(r){return r.priceTier?'$'.repeat(r.priceTier):'';}
+
+let selectedPlaceMetadata=null,pendingPlaceEnrichment=null;
+function metadataLabel(r,limit){return [priceLabel(r),r.categories.filter(c=>c!=='Cuisine not specified').slice(0,limit||99).join(' / ')].filter(Boolean).join(' · ');}
+function detailsFromTags(tags,properties={}){const raw=tags.cuisine||'',categories=raw.split(';').map(c=>c.trim().replaceAll('_',' ')).filter(Boolean).slice(0,8).map(c=>c.replace(/\b\w/g,x=>x.toUpperCase()));if(!categories.length&&properties.osm_value){const types={cafe:'Cafe',bar:'Bar',pub:'Pub',bakery:'Bakery',ice_cream:'Ice cream',coffee:'Coffee',tea:'Tea',pastry:'Pastry',food_court:'Food court',biergarten:'Beer garden',deli:'Deli',confectionery:'Confectionery'};if(types[properties.osm_value])categories.push(types[properties.osm_value]);}const price=String(tags['price_range']||tags['price:range']||'').trim();return {categories,priceTier:/^\${1,3}$/.test(price)?price.length:0};}
+async function enrichSelectedPlace(feature,version){const props=feature.properties||{},types={N:'node',W:'way',R:'relation'},type=types[props.osm_type],id=Number(props.osm_id);let tags={...(props.extra||{})},source=null;const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6500);try{if(type&&Number.isSafeInteger(id)&&id>0){source='https://www.openstreetmap.org/'+type+'/'+id;const url=new URL('https://overpass-api.de/api/interpreter');url.search=new URLSearchParams({data:'[out:json][timeout:5];'+type+'('+id+');out tags;'});const response=await fetch(url,{signal:controller.signal});if(response.ok){const data=await response.json(),element=data.elements?.find(e=>e.type===type&&e.id===id);if(element?.tags)tags={...tags,...element.tags};}}}catch{}finally{clearTimeout(timer);}if(version!==placeLookupVersion)return;const details=detailsFromTags(tags,props);selectedPlaceMetadata={source,checkedAt:new Date().toISOString()};if(!$('placeCuisine').value.trim())$('placeCuisine').value=details.categories.join(', ');if(!Number($('placePrice').value)&&details.priceTier)$('placePrice').value=String(details.priceTier);$('placeError').textContent='Ready to save'+(details.categories.length?' · '+details.categories.join(', '):'')+(details.priceTier?' · '+'$'.repeat(details.priceTier):'')+'. Extra details are optional.';}
+
+// Destination search is explicit and scoped to San Francisco; no device location.
+let destinationSearchController=null,destinationSearchVersion=0,pickingDestination=false;
+const knownDestinations=[{name:'Brandy Melville · Chestnut Street',address:'2085 Chestnut Street, San Francisco, CA 94123',coordinates:[-122.437591552734,37.8005905151367],coordinateSource:'https://www.whereorg.com/brandy-melville-san-francisco-38155085',aliases:['brandy melville','brandymelville','2085 chestnut'],source:'https://www.sanfranciscodowntown.com/Business/Brandy-Melville---San-Francisco/2085-Chestnut-Street-San-Francisco-CA-94123'}];
+function normalizedDestinationQuery(q){return q.trim().replace(/\b(?:on|at|near)\b/gi,' ').replace(/\s+/g,' ').trim();}
+function knownDestinationMatches(q){const n=normalizedDestinationQuery(q).toLowerCase();return n.length>=3?knownDestinations.filter(d=>d.aliases.some(a=>n.includes(a))):[];}
+function offerKnownDestinations(q){const items=knownDestinationMatches(q);for(const item of items){const b=tag('button','destination-option');b.type='button';b.textContent=item.name+' — '+item.address;b.onclick=()=>{if(validDestination(state.destination)&&state.destination.label.includes(item.name))chooseDestination(state.destination);else if(validDestination({label:item.name,coordinates:item.coordinates}))chooseDestination({label:item.name+' · '+item.address,coordinates:item.coordinates});else resolveKnownDestination(item);};$('destinationOptions').append(b);}return items.length;}
+function destinationInputChanged(){destinationSearchController?.abort();destinationSearchVersion++;$('destinationOptions').replaceChildren();if(offerKnownDestinations($('destinationQuery').value))$('destinationFeedback').textContent='Known address found. Select it to place your stop.';else $('destinationFeedback').textContent='Press Find for address search, or choose a point on the map.';}
+function toggleDestinationPicker(){pickingDestination=!pickingDestination;state.view='map';render();save();$('pickDestination').setAttribute('aria-pressed',pickingDestination);$('destinationFeedback').textContent=pickingDestination?'Tap the map at your destination. Pan or zoom first if needed.':'Map selection cancelled.';if(liveMap)liveMap.getCanvas().style.cursor=pickingDestination?'crosshair':'';}
+function useMapPickedDestination(e){if(!pickingDestination)return false;if(e.originalEvent)e.originalEvent.savedTableStopPicked=true;pickingDestination=false;$('pickDestination').setAttribute('aria-pressed',false);if(liveMap)liveMap.getCanvas().style.cursor='';chooseDestination({label:'Map-picked stop'+($('destinationQuery').value.trim()?' near '+$('destinationQuery').value.trim():''),coordinates:[e.lngLat.lng,e.lngLat.lat]});return true;}
+let censusCallbackSequence=0;
+function censusAddress(address){return new Promise((resolve,reject)=>{const callback='savedTableCensus'+(++censusCallbackSequence),script=document.createElement('script');const timer=setTimeout(()=>finish(null,Error('Address lookup timed out')),10000);function finish(data,error){clearTimeout(timer);script.remove();delete window[callback];if(error)reject(error);else resolve(data);}window[callback]=data=>finish(data);script.onerror=()=>finish(null,Error('Address lookup unavailable'));script.src='https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?'+new URLSearchParams({address,benchmark:'4',format:'jsonp',callback});document.head.append(script);});}
+async function resolveKnownDestination(item){destinationSearchController?.abort();const version=++destinationSearchVersion;$('destinationFeedback').textContent='Locating '+item.address+'…';try{const data=await censusAddress(item.address);if(version!==destinationSearchVersion)return;const m=data.result?.addressMatches?.find(m=>m.addressComponents?.city==='SAN FRANCISCO');const d={label:item.name+' · '+item.address,coordinates:m?[m.coordinates.x,m.coordinates.y]:null};if(!validDestination(d))throw Error();chooseDestination(d);}catch{if(version===destinationSearchVersion)$('destinationFeedback').textContent='Address found: '+item.address+'. The location service did not respond. Use Choose on map to place the stop.';}}
+function validCoordinates(c){return Array.isArray(c)&&c.length===2&&c.every(Number.isFinite)&&c[0]>=-180&&c[0]<=180&&c[1]>=-85&&c[1]<=85;}
+function validDestination(d){return d&&typeof d.label==='string'&&d.label.length<=250&&validCoordinates(d.coordinates);}
+function straightLineMiles(a,b){const rad=x=>x*Math.PI/180,dl=rad(b[1]-a[1]),dn=rad(b[0]-a[0]);const h=Math.sin(dl/2)**2+Math.cos(rad(a[1]))*Math.cos(rad(b[1]))*Math.sin(dn/2)**2;return 3958.8*2*Math.atan2(Math.sqrt(Math.min(1,h)),Math.sqrt(Math.max(0,1-h)));}
+function distanceOrigin(){return nearbyMode&&currentPosition?{coordinates:currentPosition.coordinates,label:'you'}:validDestination(state.destination)?{coordinates:state.destination.coordinates,label:'your stop'}:null;}
+function distanceLabel(r){const origin=distanceOrigin();return origin&&r.coordinates?straightLineMiles(origin.coordinates,r.coordinates).toFixed(1)+' mi direct from '+origin.label:'';}
+function orderedMatches(){const rows=records.filter(matches),origin=distanceOrigin();if(origin)rows.sort((a,b)=>(a.coordinates?straightLineMiles(origin.coordinates,a.coordinates):Infinity)-(b.coordinates?straightLineMiles(origin.coordinates,b.coordinates):Infinity));return rows;}
+function destinationFeatures(){return{type:'FeatureCollection',features:validDestination(state.destination)?[{type:'Feature',geometry:{type:'Point',coordinates:state.destination.coordinates},properties:{label:'Your stop'}}]:[]};}
+let stopMarkers=[];
+function sameStop(a,b){return validDestination(a)&&validDestination(b)&&a.coordinates.every((n,i)=>Math.abs(n-b.coordinates[i])<0.00001);}
+function syncStopMarkers(){if(!liveMap||!window.maplibregl?.Marker)return;stopMarkers.forEach(m=>m.remove());stopMarkers=[];for(const [i,d] of (state.stops||[]).entries()){const active=sameStop(d,state.destination),pin=tag('button','stop-map-pin'+(active?' active':''));pin.type='button';pin.textContent=active?'Your next stop · '+(i+1):'Stop '+(i+1);pin.title=d.label;pin.setAttribute('aria-label',(active?'Your next stop: ':'Stop '+(i+1)+': ')+d.label);pin.onclick=e=>{e.stopPropagation();activateStop(i);};stopMarkers.push(new maplibregl.Marker({element:pin,anchor:'bottom'}).setLngLat(d.coordinates).addTo(liveMap));}}
+function activateStop(i){nearbyMode=false;const d=state.stops[i];if(!d)return;state.destination=d;state.view='map';render();save();if(liveMap)liveMap.easeTo({center:d.coordinates,zoom:14,duration:400});}
+function removeStop(i){const removed=state.stops[i];state.stops=state.stops.filter((_,n)=>n!==i);if(sameStop(removed,state.destination))state.destination=state.stops[Math.min(i,state.stops.length-1)]||null;render();save();fitPlaces();}
+function moveStop(i,delta){const j=i+delta;if(j<0||j>=state.stops.length)return;const next=[...state.stops];[next[i],next[j]]=[next[j],next[i]];state.stops=next;render();save();}
+function updateDestination(){syncStopMarkers();if(liveMap&&mapReady&&liveMap.getSource('destination'))liveMap.getSource('destination').setData(destinationFeatures());const d=state.destination;$('destinationSummary').textContent=nearbyMode&&currentPosition?'Near me · Saved spots are ordered by direct distance from your current location. Your planned stops are kept below.':validDestination(d)?'Your next stop: '+d.label+' · Restaurants ordered by direct distance from this stop.':'Add stops to plan your day and find saved food nearby.';$('clearDestination').hidden=!state.stops.length;const list=$('stopList');list.replaceChildren();for(const [i,stop] of state.stops.entries()){const row=tag('div','stop-row'),choose=tag('button','stop-choice');choose.type='button';choose.textContent=(i+1)+'. '+stop.label;choose.setAttribute('aria-pressed',sameStop(stop,d));choose.onclick=()=>activateStop(i);row.append(choose);for(const [label,action,disabled] of [['↑',()=>moveStop(i,-1),i===0],['↓',()=>moveStop(i,1),i===state.stops.length-1],['×',()=>removeStop(i),false]]){const b=tag('button');b.type='button';b.textContent=label;b.disabled=disabled;b.setAttribute('aria-label',(label==='×'?'Remove':label==='↑'?'Move earlier:':'Move later:')+' '+stop.label);b.onclick=action;row.append(b);}list.append(row);}}
+function chooseDestination(d){if(!validDestination(d))return;nearbyMode=false;pickingDestination=false;$('pickDestination').setAttribute('aria-pressed',false);state.view='map';if(!state.stops.some(s=>sameStop(s,d))){if(state.stops.length>=30){$('destinationFeedback').textContent='Your plan holds 30 stops. Remove one before adding another.';return;}state.stops=[...state.stops,d];}state.destination=state.stops.find(s=>sameStop(s,d));$('destinationOptions').replaceChildren();$('destinationQuery').value='';$('destinationFeedback').textContent='Stop added. Search again to add another, or select a stop in your plan to find food nearby.';render();save();fitPlaces();}
+function clearDestination(){pickingDestination=false;$('pickDestination').setAttribute('aria-pressed',false);if(liveMap)liveMap.getCanvas().style.cursor='';destinationSearchController?.abort();destinationSearchVersion++;state.destination=null;state.stops=[];$('destinationQuery').value='';$('destinationOptions').replaceChildren();$('destinationFeedback').textContent='Stops cleared. Your restaurant filters are unchanged.';render();save();}
+async function searchDestination(e){e.preventDefault();const q=normalizedDestinationQuery($('destinationQuery').value);if(q.length<3){$('destinationFeedback').textContent='Enter a store, landmark, or street address, including its city.';return;}destinationSearchController?.abort();const version=++destinationSearchVersion;const controller=new AbortController();destinationSearchController=controller;const timer=setTimeout(()=>controller.abort(),10000);$('destinationOptions').replaceChildren();const localCount=offerKnownDestinations(q);$('destinationFeedback').textContent=localCount?'Known address found below. Select it to place your stop.':'Finding matching places…';if(localCount){clearTimeout(timer);return;}try{const url=new URL('https://photon.komoot.io/api/');url.search=new URLSearchParams({q,limit:'6',lang:'en'}).toString();const response=await fetch(url,{signal:controller.signal});if(!response.ok)throw Error();const data=await response.json();if(version!==destinationSearchVersion)return;const seen=new Set(),items=[];for(const f of data.features||[]){const p=f.properties||{},c=f.geometry?.coordinates;const label=[p.name,[p.housenumber,p.street].filter(Boolean).join(' '),p.city,p.country].filter(Boolean).join(' · ').slice(0,250);const d={label:label||q,coordinates:c};if(validDestination(d)&&!seen.has(c.join(','))){items.push(d);seen.add(c.join(','));}}if(!items.length){$('destinationFeedback').textContent='No matches for this wording. Try the street address, or use Choose on map below.';return;}$('destinationFeedback').textContent='Choose your destination. Search data © OpenStreetMap contributors, via Photon.';for(const d of items){const b=tag('button','destination-option');b.type='button';b.textContent=d.label;b.onclick=()=>chooseDestination(d);$('destinationOptions').append(b);}}catch{if(version===destinationSearchVersion)$('destinationFeedback').textContent='Destination search did not respond. Use Choose on map to set your stop without address lookup. Your saved places are still available.';}finally{clearTimeout(timer);}}
+function renderTray(rows){$('tray').replaceChildren();$('trayPanel').hidden=state.view!=='map'||!rows.length;for(const r of rows){const card=tag('button','tray-card'+(state.selected===r.id?' active':''));card.dataset.restaurantId=r.id;card.setAttribute('aria-pressed',state.selected===r.id);card.onclick=()=>select(r.id);card.append(photoElement(r,'tray-photo'));const body=tag('div','tray-body'),h=tag('strong'),p=tag('p'),d=tag('small');h.textContent=r.name;p.textContent=metadataLabel(r,2);d.textContent=distanceLabel(r)||r.neighborhood;body.append(h,p,d);card.append(body);$('tray').append(card);}$('trayHint').textContent=nearbyMode&&currentPosition?'Closest to you first · distances are direct, not walking':validDestination(state.destination)?'Closest to your stop first · distances are direct, not walking':'Swipe to compare · tap a card to highlight its pin';}
+function stepTray(direction){const rows=orderedMatches();if(!rows.length)return;const i=rows.findIndex(r=>r.id===state.selected);const next=i<0?(direction>0?0:rows.length-1):(i+direction+rows.length)%rows.length;select(rows[next].id);}
+
+// Quiet basemap, individual locations, and one photo preview at a time.
+let liveMap=null,mapReady=false,livePopup=null,mapFailed=false;
+let savedPinMarkers=[];
+function validCamera(c){return c&&validCoordinates(c.center)&&Number.isFinite(c.zoom)&&c.zoom>=1&&c.zoom<=18;}
+function mapFeatures(rows){const groups=new Map();for(const r of rows){if(!Array.isArray(r.coordinates))continue;const k=r.coordinates.join(',');if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r);}return{type:'FeatureCollection',features:[...groups.values()].map(rs=>({type:'Feature',geometry:{type:'Point',coordinates:rs[0].coordinates},properties:{ids:JSON.stringify(rs.map(r=>r.id)),label:rs.map(r=>r.name).join(' + '),active:rs.some(r=>r.id===state.selected),places:rs.length}}))};}
+// HTML pins remain visible independently of basemap symbol/tile rendering.
+function syncSavedPins(){if(!liveMap||!window.maplibregl?.Marker)return;for(const marker of savedPinMarkers)marker.remove();savedPinMarkers=[];for(const f of mapFeatures(records.filter(matches)).features){const ids=JSON.parse(f.properties.ids),pin=tag('button','saved-map-pin'+(f.properties.active?' active':''));pin.type='button';pin.textContent=ids.length>1?String(ids.length):'';pin.setAttribute('aria-label',f.properties.label);pin.title=f.properties.label;pin.onclick=e=>{e.stopPropagation();if(pickingDestination){useMapPickedDestination({lngLat:{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}});return;}if(ids.length===1){select(ids[0]);return;}if(livePopup)livePopup.remove();livePopup=new maplibregl.Popup({offset:15,maxWidth:'240px',closeOnClick:false}).setLngLat(f.geometry.coordinates).setDOMContent(popupContent(records.filter(r=>ids.includes(r.id)))).addTo(liveMap);};savedPinMarkers.push(new maplibregl.Marker({element:pin,anchor:'center'}).setLngLat(f.geometry.coordinates).addTo(liveMap));}}
+function mapMessage(t){$('mapStatus').textContent=t;}
+function fitPlaces(){if(!liveMap||!mapReady)return;const pts=records.filter(matches).map(r=>r.coordinates).filter(Boolean);for(const d of state.stops||[])if(validDestination(d))pts.push(d.coordinates);if(!pts.length){mapMessage('No matches. Try removing a filter.');return;}const b=new maplibregl.LngLatBounds();pts.forEach(c=>b.extend(c));liveMap.fitBounds(b,{padding:{top:70,bottom:70,left:45,right:45},maxZoom:15,duration:450});}
+function popupContent(rows){const root=tag('div','map-preview');if(rows.length>1){const p=tag('p');p.className='shared-address';p.textContent=rows.length+' places at this address';root.append(p);}for(const r of rows){const a=photoElement(r,'popup-photo');const btn=tag('button','popup-choice');btn.textContent=r.name;btn.onclick=()=>select(r.id);const p=tag('p','popup-meta');p.textContent=metadataLabel(r,2);root.append(a,btn,p);if(rows.length===1){const link=tag('a','popup-directions');link.textContent='Directions ↗';link.href='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(r.address);link.target='_blank';link.rel='noopener noreferrer';root.append(link);}}return root;}
+function showMapSelection(r,move){if(!liveMap||!mapReady||state.view!=='map'||!r?.coordinates)return;if(livePopup)livePopup.remove();livePopup=new maplibregl.Popup({offset:15,maxWidth:'240px',focusAfterOpen:false,closeOnClick:false}).setLngLat(r.coordinates).setDOMContent(popupContent([r])).addTo(liveMap);if(move)liveMap.easeTo({center:r.coordinates,zoom:Math.max(liveMap.getZoom(),14),duration:350});}
+function mapCoverage(){if(!liveMap||!mapReady)return;const rows=records.filter(matches),located=rows.filter(r=>Array.isArray(r.coordinates)),b=liveMap.getBounds?.();const inside=b?located.filter(r=>b.contains(r.coordinates)).length:located.length;mapMessage(inside+' of '+located.length+' mapped places in view'+(located.length<rows.length?' · '+(rows.length-located.length)+' need coordinates':'')+' · Show all to reframe. Shared pins contain both places.');}
+function updateLiveMap(){if(!liveMap)return;syncSavedPins();if(!mapReady)return;liveMap.getSource('saved-places').setData(mapFeatures(records.filter(matches)));if(!records.some(r=>r.id===state.selected&&r.coordinates)&&livePopup){livePopup.remove();livePopup=null;}if(!state.selected&&livePopup){livePopup.remove();livePopup=null;}mapCoverage();}
+function startLiveMap(){if(liveMap){liveMap.resize();updateLiveMap();return;}if(!window.maplibregl){mapFailed=true;mapMessage('Connect to the internet to load the map. Your list still works.');return;}try{const cam=validCamera(state.camera)?state.camera:{center:[-122.438,37.774],zoom:11.7};liveMap=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/positron',center:cam.center,zoom:cam.zoom,minZoom:1,maxZoom:18,attributionControl:true});syncSavedPins();syncStopMarkers();drawMyLocation();liveMap.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');liveMap.on('moveend',()=>{const c=liveMap.getCenter();state.camera={center:[c.lng,c.lat],zoom:liveMap.getZoom()};save();mapCoverage();});liveMap.on('error',()=>mapMessage('Some map data could not load. Your list and filters are still available.'));liveMap.on('load',()=>{mapReady=true;mapFailed=false;
+// Retain street/neighborhood context, hide unrelated businesses and transport icons.
+for(const layer of liveMap.getStyle().layers){if(layer.type==='symbol'&&(/poi|transit|airport|aeroway/i.test(layer.id)||layer['source-layer']==='poi'))liveMap.setLayoutProperty(layer.id,'visibility','none');}
+liveMap.addSource('destination',{type:'geojson',data:destinationFeatures()});liveMap.addLayer({id:'destination-dot',type:'circle',source:'destination',paint:{'circle-radius':0,'circle-color':'#b46d32','circle-stroke-color':'#fff','circle-stroke-width':4}});liveMap.addLayer({id:'destination-label',type:'symbol',source:'destination',layout:{visibility:'none','text-field':'YOUR STOP','text-size':11,'text-anchor':'bottom','text-offset':[0,-1.5]},paint:{'text-color':'#8c4b1a','text-halo-color':'#fff','text-halo-width':2}});liveMap.addSource('saved-places',{type:'geojson',data:mapFeatures(records.filter(matches)),cluster:false});liveMap.addLayer({id:'place-halos',type:'circle',source:'saved-places',layout:{visibility:'none'},paint:{'circle-radius':['case',['get','active'],15,9],'circle-color':'#ffffff','circle-opacity':0.9}});liveMap.addLayer({id:'places',type:'circle',source:'saved-places',layout:{visibility:'none'},paint:{'circle-radius':['case',['get','active'],9,['>', ['get','places'],1],9,5],'circle-color':['case',['get','active'],'#b46d32','#164f53'],'circle-stroke-width':1,'circle-stroke-color':'#fff'}});liveMap.addLayer({id:'shared-count',type:'symbol',source:'saved-places',filter:['>', ['get','places'],1],layout:{visibility:'none','text-field':['to-string',['get','places']],'text-size':10,'text-allow-overlap':true},paint:{'text-color':'#fff'}});liveMap.addLayer({id:'selected-name',type:'symbol',source:'saved-places',filter:['==',['get','active'],true],layout:{'text-field':['get','label'],'text-size':12,'text-anchor':'top','text-offset':[0,1.4],'text-max-width':15},paint:{'text-color':'#164f53','text-halo-color':'#fff','text-halo-width':2}});
+liveMap.on('click',e=>{useMapPickedDestination(e);});liveMap.on('click','places',e=>{if(pickingDestination||e.originalEvent?.savedTableStopPicked)return;const f=e.features[0],ids=JSON.parse(f.properties.ids);if(ids.length===1){select(ids[0]);return;}if(livePopup)livePopup.remove();livePopup=new maplibregl.Popup({offset:15,maxWidth:'240px',closeOnClick:false}).setLngLat(f.geometry.coordinates).setDOMContent(popupContent(records.filter(r=>ids.includes(r.id)))).addTo(liveMap);});liveMap.on('mouseenter','places',()=>liveMap.getCanvas().style.cursor='pointer');liveMap.on('mouseleave','places',()=>liveMap.getCanvas().style.cursor='');updateLiveMap();updateDestination();if(currentPosition)drawMyLocation(true);else if(!validCamera(state.camera))fitPlaces();showMapSelection(records.find(r=>r.id===state.selected),false);});}catch{if(liveMap){liveMap.remove();liveMap=null;}mapFailed=true;mapMessage('The map could not start. Try a WebGL-enabled browser; your list is still available.');}}
+function retryMap(){if(locationMarker){locationMarker.remove();locationMarker=null;}stopMarkers.forEach(m=>m.remove());stopMarkers=[];for(const marker of savedPinMarkers)marker.remove();savedPinMarkers=[];if(liveMap){liveMap.remove();liveMap=null;mapReady=false;}if(!window.maplibregl){const s=document.createElement('script');s.src='https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js';s.onload=startLiveMap;s.onerror=()=>mapMessage('Map download failed. Please check your connection.');document.head.append(s);}else startLiveMap();}
+
+// Location stays in memory and is requested only by the My location button.
+let nearbyMode=false,currentPosition=null,locationMarker=null,locationWatch=null,locationVersion=0,locationTimedOut=false;
+function drawMyLocation(center=false){if(!liveMap||!currentPosition||!window.maplibregl?.Marker)return;if(locationMarker)locationMarker.remove();const dot=tag('div','my-location-dot');dot.setAttribute('role','img');dot.setAttribute('aria-label','Your current location, accuracy about '+Math.round(currentPosition.accuracy)+' meters');dot.title='You are here · accuracy about '+Math.round(currentPosition.accuracy)+' m';locationMarker=new maplibregl.Marker({element:dot,anchor:'center'}).setLngLat(currentPosition.coordinates).addTo(liveMap);if(center)liveMap.easeTo({center:currentPosition.coordinates,zoom:14,duration:500});}
+function locateMe(){nearbyMode=true;state.city='';state.neighborhood='';$('city').value='';$('neighborhood').value='';rememberGPSChoice();if(window.isSecureContext===false){$('locationStatus').textContent='GPS is blocked in this page context. Open the prototype as an HTTPS website in a browser that supports location.';return;}if(document.permissionsPolicy?.allowsFeature&&!document.permissionsPolicy.allowsFeature('geolocation')){$('locationStatus').textContent='This embedded browser blocks location. Open the site in a browser with location enabled.';return;}if(!navigator.geolocation){$('locationStatus').textContent='Location is unavailable in this browser.';return;}state.view='map';render();$('notice').textContent='Near me · city and neighborhood filters cleared. Cuisine and budget are preserved.';if(locationWatch!==null&&locationTimedOut&&!currentPosition){navigator.geolocation.clearWatch(locationWatch);locationWatch=null;locationTimedOut=false;}if(locationWatch!==null){if(currentPosition)drawMyLocation(true);else $('locationStatus').textContent='Waiting for location permission or a position…';return;}const version=++locationVersion;let first=true;$('locationStatus').textContent='Requesting location permission…';$('stopLocation').hidden=false;locationWatch=navigator.geolocation.watchPosition(position=>{if(version!==locationVersion)return;const coordinates=[position.coords.longitude,position.coords.latitude];if(!validCoordinates(coordinates)){$('locationStatus').textContent='This location is outside the supported map area.';return;}locationTimedOut=false;currentPosition={coordinates,accuracy:position.coords.accuracy};state.camera=null;render();save();drawMyLocation(first||$('followGPS').checked);first=false;$('locationStatus').textContent='● You are here · accuracy about '+Math.round(position.coords.accuracy)+' m · Updated '+new Date().toLocaleTimeString()+'. '+records.filter(matches).filter(r=>r.coordinates&&straightLineMiles(coordinates,r.coordinates)<=2).length+' matching saves within 2 miles.';},error=>{if(version!==locationVersion)return;if(error.code===3){locationTimedOut=true;$('locationStatus').textContent='Still waiting for your device location. GPS is listening; tap the arrow to retry. Check that Location Services is enabled for this browser in your device settings.';return;}stopMyLocation(false);$('locationStatus').textContent=error.code===1?'Location access was blocked. Allow location in your browser and device settings. This local preview may require opening an HTTPS version in your regular browser.':error.code===3?'Location timed out. Try My location again.':'Could not determine your location. Check device Location Services and try again.';},{enableHighAccuracy:false,timeout:30000,maximumAge:60000});}
+function stopMyLocation(disableResume=true){if(disableResume){$('rememberGPS').checked=false;rememberGPSChoice();}locationVersion++;if(locationWatch!==null&&navigator.geolocation)navigator.geolocation.clearWatch(locationWatch);locationWatch=null;locationTimedOut=false;currentPosition=null;nearbyMode=false;if(locationMarker)locationMarker.remove();locationMarker=null;state.camera=null;save();$('stopLocation').hidden=true;$('locationStatus').textContent='GPS stopped.';render();}
+
+function rememberGPSChoice(){try{localStorage.setItem('saved-table-resume-gps-v1',$('rememberGPS').checked?'true':'false');}catch{}}
+async function initLocationPreferences(){let resume=false;try{resume=localStorage.getItem('saved-table-resume-gps-v1')==='true';}catch{}$('rememberGPS').checked=resume;$('followGPS').checked=true;$('rememberGPS').onchange=rememberGPSChoice;$('followGPS').onchange=()=>{if($('followGPS').checked&&currentPosition)drawMyLocation(true);};if(!resume)return;try{if(navigator.permissions?.query){const permission=await navigator.permissions.query({name:'geolocation'});if(permission.state==='denied'){$('locationStatus').textContent='GPS resume is enabled, but location access is blocked in browser settings.';return;}if(permission.state==='prompt'){$('locationStatus').textContent='GPS resume is enabled. Tap My location to approve location access.';return;}}locateMe();}catch{$('locationStatus').textContent='Tap My location to resume GPS.';}}
+
+const $=id=>document.getElementById(id);
+const key='saved-table-v1';
+const defaults={city:'',neighborhood:'',cuisine:'',price:'',search:'',selected:null,view:'map',camera:null,mapLayoutRevision:2,destination:null,stops:[]};
+let state={...defaults}, restored=false, storageOK=true;
+try {const old=JSON.parse(localStorage.getItem(key));if(old&&old.version===1){for(const k of ['city','neighborhood','cuisine','price','search'])if(typeof old[k]==='string')state[k]=old[k];if(typeof old.selected==='string')state.selected=old.selected;if(['map','list'].includes(old.view))state.view=old.view;if(old.mapLayoutRevision===2&&validCamera(old.camera))state.camera=old.camera;if(validDestination(old.destination))state.destination=old.destination;if(Array.isArray(old.stops))state.stops=old.stops.filter(validDestination).slice(0,30);if(!state.stops.length&&validDestination(state.destination))state.stops=[state.destination];if(state.stops.length&&!state.stops.some(d=>sameStop(d,state.destination)))state.destination=state.stops[0];restored=true;}}catch{storageOK=false;}
+const family=new Set(['Japanese','Korean','Cantonese','Chinese','Asian','Asian Fusion','Sushi','Shabu Shabu','Udon','Dim Sum','Poke','Matcha']);
+let records=[];
+function save(){try{localStorage.setItem(key,JSON.stringify({...state,camera:currentPosition?null:state.camera,version:1}));}catch{storageOK=false;} $('storage').textContent=storageOK?'Filters and selection save on this browser.':'Browser storage unavailable. Your search stays only while this page is open.';}
+function matches(r){return(!state.city||r.city===state.city)&&(!state.neighborhood||r.neighborhood===state.neighborhood)&&(!state.price||(r.priceTier>0&&r.priceTier<=Number(state.price)))&&(!state.cuisine||(state.cuisine==='family'?r.categories.some(c=>family.has(c)):r.categories.includes(state.cuisine)))&&(!state.search||[r.name,r.city,r.neighborhood,...r.categories].join(' ').toLowerCase().includes(state.search.toLowerCase()));}
+function tag(t,c){const x=document.createElement(t);if(c)x.className=c;return x;}
+function select(id){state.selected=id;render();save();document.querySelector('[data-restaurant-id="'+id+'"]')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});showMapSelection(records.find(r=>r.id===id),true);$('notice').textContent='Selected '+records.find(r=>r.id===id).name+'. Your filters are preserved.';}
+function render(){const visible=orderedMatches();if(state.selected&&!visible.some(r=>r.id===state.selected)){state.selected=null;$('notice').textContent='Previous selection is outside these filters.';}
+$('count').textContent=visible.length;$('criteria').textContent=[state.city||'All cities',state.neighborhood,state.cuisine==='family'?'Asian cuisines':state.cuisine,state.price?'Up to '+'$'.repeat(Number(state.price)):''].filter(Boolean).join(' · ');
+$('results').replaceChildren();$('mapPanel').hidden=state.view!=='map';$('listView').setAttribute('aria-pressed',state.view==='list');$('mapView').setAttribute('aria-pressed',state.view==='map');
+for(const r of visible){const b=tag('button','card'+(r.id===state.selected?' active':''));b.setAttribute('aria-pressed',r.id===state.selected);b.onclick=()=>select(r.id);const art=photoElement(r,'art');const body=tag('div','body');const h=tag('h3');h.textContent=r.name;const p=tag('p');p.textContent=metadataLabel(r);const n=tag('p');n.textContent=[r.neighborhood,distanceLabel(r)].filter(Boolean).join(' · ');const bottom=tag('div','bottom');bottom.textContent=r.id===state.selected?'✓ Selected':'Saved to try ↗';body.append(h,p,n,bottom);b.append(art,body);$('results').append(b);}
+if(!visible.length){const e=tag('div','empty');const h=tag('h3');h.textContent='No saved places match yet.';const p=tag('p');p.textContent='Try another neighborhood or remove a filter.';const b=tag('button');b.textContent='Clear filters';b.onclick=reset;e.append(h,p,b);$('results').append(e);}
+const r=records.find(r=>r.id===state.selected);$('selected').hidden=!r;$('selected').replaceChildren();if(r){const b=tag('button');b.textContent='Dismiss';b.onclick=()=>{state.selected=null;render();save();};const strong=tag('strong');strong.textContent=r.name;const p=tag('p');p.textContent=[r.neighborhood,metadataLabel(r)].filter(Boolean).join(' · ');$('selected').append(b,strong,p);const address=tag('p');address.textContent=r.address;const links=tag('div','detail-links');for(const [label,url]of [['Directions','https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(r.address)],...(safeSource(r.locationSource)?[['Location source',r.locationSource]]:[]),...(safeSource(r.metadataSource)?[['Details source',r.metadataSource]]:[])]){const a=tag('a');a.textContent=label+' ↗';a.href=url;a.target='_blank';a.rel='noopener noreferrer';links.append(a);}const hero=photoCandidates(r)[0];if(hero&&safeSource(hero.source)){const a=tag('a');a.textContent='Photo source ↗';a.href=hero.source;a.target='_blank';a.rel='noopener noreferrer';links.append(a);}const edit=tag('button','edit-photo');edit.textContent='Choose food photo';edit.onclick=()=>openPhotoEditor(r);links.append(edit);const note=tag('p');note.className='location-note';note.textContent=!r.coordinates?'Not mapped yet. Coordinates are needed for a pin.':r.id==='r23'?'Nob Hill branch assumed; confirm this is your saved location.':'Approximate address location. Check directions before visiting.';$('selected').append(address,links,note);}if(state.view==='map'){startLiveMap();requestAnimationFrame(()=>{if(liveMap)liveMap.resize();});}updateLiveMap();updateDestination();renderTray(visible);}
+function reset(){destinationSearchController?.abort();destinationSearchVersion++;pickingDestination=false;$('pickDestination').setAttribute('aria-pressed',false);state={...defaults};if(liveMap)liveMap.jumpTo({center:[-122.438,37.774],zoom:11.7});for(const k of ['city','neighborhood','cuisine','price','search'])$(k).value='';$('destinationQuery').value='';$('destinationOptions').replaceChildren();render();save();$('notice').textContent='Filters and destination cleared. Start fresh.';}
+async function init(){try{records=JSON.parse(document.getElementById("restaurant-data").textContent).restaurants;loadPersonalPlaces();records.push(...customPlaces);for(const city of [...new Set(records.map(r=>r.city).filter(Boolean))].sort())$('city').add(new Option(city,city));for(const n of [...new Set(records.map(r=>r.neighborhood))].sort()){const o=new Option(n,n);$('neighborhood').add(o);}for(const c of [...new Set(records.flatMap(r=>r.categories))].sort())$('cuisine').add(new Option(c,c));for(const k of ['city','neighborhood','cuisine','price','search']){if(k!=='search'&&![...$(k).options].some(o=>o.value===state[k]))state[k]='';$(k).value=state[k];$(k).addEventListener(k==='search'?'input':'change',()=>{state[k]=$(k).value;render();save();if(state.view==='map')fitPlaces();});}$('reset').onclick=reset;$('destinationForm').onsubmit=searchDestination;$('destinationQuery').addEventListener('input',destinationInputChanged);$('pickDestination').onclick=toggleDestinationPicker;$('clearDestination').onclick=clearDestination;$('trayPrev').onclick=()=>stepTray(-1);$('trayNext').onclick=()=>stepTray(1);if(validDestination(state.destination))$('destinationQuery').value=state.destination.label;$('lookupPlace').onclick=()=>lookupNewPlace(false);$('placeName').addEventListener('input',placeNameChanged);for(const id of ['placeAddress','placeCity'])$(id).addEventListener('input',()=>{placeLookupVersion++;placeController?.abort();$('placeLat').value='';$('placeLon').value='';$('placeLocationOptions').replaceChildren();$('placeChosen').textContent='';});$('photoForm').onsubmit=savePhoto;$('placeForm').onsubmit=saveNewPlace;$('closePhoto').onclick=()=>$('photoDialog').close();$('closePlace').onclick=()=>{clearTimeout(placeTypeTimer);placeController?.abort();placeLookupVersion++;$('placeDialog').close();};$('addPlace').onclick=()=>{$('placeError').textContent='';$('placeLocationOptions').replaceChildren();selectedPlaceMetadata=null;pendingPlaceEnrichment=null;$('placeDialog').showModal();};$('myLocation').onclick=locateMe;$('nearMeArrow').onclick=locateMe;$('stopLocation').onclick=stopMyLocation;$('fitMap').onclick=fitPlaces;$('retryMap').onclick=retryMap;for(const [id,view]of[['listView','list'],['mapView','map']])$(id).onclick=()=>{state.view=view;render();save();if(view==='map'){const selected=records.find(r=>r.id===state.selected);if(selected)showMapSelection(selected,true);else fitPlaces();}};render();save();initLocationPreferences();$('notice').textContent=restored?'Welcome back. Your last search has been restored.':'Start with a neighborhood or a craving.';}catch{$('notice').textContent='Could not load your places. Please reload to try again.';}}
+document.addEventListener("DOMContentLoaded",init);
+</script></body></html>
