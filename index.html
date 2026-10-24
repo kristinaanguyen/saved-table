@@ -26,6 +26,8 @@
 .collection-hub{padding:0 0 22px}.collection-tabs{display:flex;gap:8px;flex-wrap:wrap}.collection-tabs button{border-radius:24px;padding:11px 19px;font-weight:650}.collection-tabs [aria-pressed=true]{background:var(--teal);color:white}.collection-hub p{font-size:13px;color:var(--muted)}.account-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:12px}.account-bar button{font-size:12px;padding:6px 11px}#signOut[hidden],#openAccount[hidden],#accountLoading[hidden]{display:none}#accountSubmit:disabled{opacity:.45;cursor:default}.save-to-mine{background:var(--teal);color:white;border-radius:20px;font-size:12px}.save-to-mine:disabled{background:#edf3ed;color:var(--teal)}
 
 .import-dialog{width:min(700px,95vw)}.import-row{display:flex;gap:10px;padding:13px 0;border-top:1px solid var(--line);align-items:flex-start}.import-row>input{width:auto;margin:15px 0}.import-row>div{flex:1;min-width:0}.import-row input{margin:0;font-weight:650}.import-row p{margin:6px 0;font-size:12px}.import-row small{color:var(--teal);font-size:11px}.import-row button{display:block;width:100%;text-align:left;font-size:12px;margin-top:6px}.import-dialog textarea{width:100%;border:1px solid var(--line);padding:10px;border-radius:10px;font:12px/1.5 inherit}.screenshot-import{margin-bottom:8px}.import-dialog button:disabled{opacity:.45;cursor:default}#importPreview{max-height:370px;overflow:auto;margin:15px 0}#saveImport[hidden],#retryImportLocations[hidden],#importPreview[hidden]{display:none}
+
+.photo-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 </style></head><body>
 <header><a class="brand" href="./">saved table<span>by Kristina Nguyen</span></a><span class="concept">Independent Beli concept</span></header>
 <main><section class="intro"><p class="eyebrow">YOUR PLACES. YOUR NEXT PLAN.</p><h1>Somewhere good,<br>already saved.</h1><p>Rediscover your saved places. Keep your place, even when life interrupts.</p></section>
@@ -1401,7 +1403,19 @@
         37.8637344
       ],
       "address": "2566 Telegraph Avenue Berkeley California 94704",
-      "photo": null,
+      "photo": {
+        "url": "https://kirakuberkeley.com/wp-content/uploads/2020/04/menu1-768x768.jpg",
+        "alt": "Small plates pictured by Kiraku Berkeley",
+        "source": "https://kirakuberkeley.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r31",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Kiraku Berkeley website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1411,7 +1425,23 @@
       "locationSource": "https://www.openstreetmap.org/node/3036917827",
       "coordinateSource": "https://www.openstreetmap.org/node/3036917827",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://kirakuberkeley.com/wp-content/uploads/2020/04/menu1-768x768.jpg",
+          "alt": "Small plates pictured by Kiraku Berkeley",
+          "source": "https://kirakuberkeley.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r31",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Kiraku Berkeley website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r32",
@@ -1510,7 +1540,19 @@
         37.8698541
       ],
       "address": "2177 Shattuck Avenue Berkeley California 94704",
-      "photo": null,
+      "photo": {
+        "url": "https://images.getbento.com/accounts/d45359a47d67850af754c5b01b52bf63/media/images/91062header_Oori_Rice_Triangles.jpg?w=1200&fit=max&auto=compress,format&cs=origin",
+        "alt": "Rice triangles and plated dishes pictured by Oori",
+        "source": "https://www.ooritriangles.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r35",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Oori website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1520,7 +1562,49 @@
       "locationSource": "https://www.openstreetmap.org/node/3191146339",
       "coordinateSource": "https://www.openstreetmap.org/node/3191146339",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.getbento.com/accounts/d45359a47d67850af754c5b01b52bf63/media/images/91062header_Oori_Rice_Triangles.jpg?w=1200&fit=max&auto=compress,format&cs=origin",
+          "alt": "Rice triangles and plated dishes pictured by Oori",
+          "source": "https://www.ooritriangles.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r35",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Oori website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.getbento.com/accounts/d45359a47d67850af754c5b01b52bf63/media/images/462501200_pixel.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5",
+          "alt": "Rice bowl and rice triangle pictured by Oori",
+          "source": "https://www.ooritriangles.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r35",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Oori website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.getbento.com/accounts/d45359a47d67850af754c5b01b52bf63/media/images/30326tofu_plate_Oori_Rice_Triangles.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5",
+          "alt": "Tofu rice plate pictured by Oori",
+          "source": "https://www.ooritriangles.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r35",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "Oori website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r36",
@@ -1616,7 +1700,19 @@
         37.8566263
       ],
       "address": "2977 College Avenue Berkeley California 94705",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/642c6cdc186c714017c0e7c2/d20b7693-e79e-4a14-b3b7-a97e531dad3e/Aloha+roll.jpg?format=1000w",
+        "alt": "Aloha sushi roll pictured by Manpuku Berkeley",
+        "source": "https://www.manpuku.org/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r39",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Manpuku Berkeley website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1626,7 +1722,23 @@
       "locationSource": "https://www.openstreetmap.org/node/7926250588",
       "coordinateSource": "https://www.openstreetmap.org/node/7926250588",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/642c6cdc186c714017c0e7c2/d20b7693-e79e-4a14-b3b7-a97e531dad3e/Aloha+roll.jpg?format=1000w",
+          "alt": "Aloha sushi roll pictured by Manpuku Berkeley",
+          "source": "https://www.manpuku.org/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r39",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Manpuku Berkeley website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r40",
@@ -1741,7 +1853,19 @@
         37.8802114
       ],
       "address": "2114 Vine Street Berkeley California 94709",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/5dd3141d81a5303e9b8f401f/1574130905739-BGWLX4Y3JI30KAHWLM9N/Falafal+Dish.jpg?format=1000w",
+        "alt": "Falafel pita pictured by FAVA on Vine Street",
+        "source": "https://www.favaonvine.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r44",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "FAVA on Vine website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1752,7 +1876,36 @@
       "locationSource": "https://www.openstreetmap.org/node/1718826322",
       "coordinateSource": "https://www.openstreetmap.org/node/1718826322",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5dd3141d81a5303e9b8f401f/1574130905739-BGWLX4Y3JI30KAHWLM9N/Falafal+Dish.jpg?format=1000w",
+          "alt": "Falafel pita pictured by FAVA on Vine Street",
+          "source": "https://www.favaonvine.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r44",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "FAVA on Vine website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5dd3141d81a5303e9b8f401f/1574122586895-SLE5MJ106MV8L2MMOC5A/IMG_8138.jpg?format=1000w",
+          "alt": "Seasonal plate pictured by FAVA on Vine Street",
+          "source": "https://www.favaonvine.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r44",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "FAVA on Vine website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r45",
@@ -1795,7 +1948,19 @@
         37.8622402
       ],
       "address": "1453 Dwight Way Berkeley California 94702",
-      "photo": null,
+      "photo": {
+        "url": "https://static1.squarespace.com/static/679bfc427a43b45f9c132465/t/69fcd769f9184b215ab91277/1778177897482/cover-16x9-v1.webp",
+        "alt": "Thai brunch dish pictured by Tanzie’s Cafe",
+        "source": "https://www.tanziescafe.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r46",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Tanzie’s Cafe website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1805,7 +1970,23 @@
       "locationSource": "https://www.openstreetmap.org/node/10104531860",
       "coordinateSource": "https://www.openstreetmap.org/node/10104531860",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://static1.squarespace.com/static/679bfc427a43b45f9c132465/t/69fcd769f9184b215ab91277/1778177897482/cover-16x9-v1.webp",
+          "alt": "Thai brunch dish pictured by Tanzie’s Cafe",
+          "source": "https://www.tanziescafe.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r46",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Tanzie’s Cafe website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r47",
@@ -1903,7 +2084,19 @@
         37.8065254
       ],
       "address": "1601 San Pablo Avenue Oakland California 94612",
-      "photo": null,
+      "photo": {
+        "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando-combo.avif",
+        "alt": "Fried chicken sandwich and fries pictured by HOTBOYS",
+        "source": "https://worldfamoushotboys.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r50",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "HOTBOYS website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1913,7 +2106,36 @@
       "locationSource": "https://www.openstreetmap.org/node/1556251695",
       "coordinateSource": "https://www.openstreetmap.org/node/1556251695",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando-combo.avif",
+          "alt": "Fried chicken sandwich and fries pictured by HOTBOYS",
+          "source": "https://worldfamoushotboys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r50",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "HOTBOYS website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando.avif",
+          "alt": "Fried chicken sandwich pictured by HOTBOYS",
+          "source": "https://worldfamoushotboys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r50",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "HOTBOYS website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r51",
@@ -1985,7 +2207,19 @@
         37.7794536
       ],
       "address": "1077 Mission Street San Francisco California 94103",
-      "photo": null,
+      "photo": {
+        "url": "https://img.getopen.com/cdn-cgi/image/width=2048,fit=cover,format=auto,quality=85/https://storage.googleapis.com/open-merchant-app-assets/media/89511f94-4cc9-44b0-b271-05f4dc057f0d/5a8b73cd-c572-4e00-b244-1461e861ee56/2%206x8%20%281%29%20%281%29.jpg",
+        "alt": "Pepperoni Detroit-style pizzas pictured by Square Pie Guys",
+        "source": "https://www.squarepieguys.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r53",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Square Pie Guys website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -1995,7 +2229,23 @@
       "locationSource": "https://www.openstreetmap.org/way/256042033",
       "coordinateSource": "https://www.openstreetmap.org/way/256042033",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://img.getopen.com/cdn-cgi/image/width=2048,fit=cover,format=auto,quality=85/https://storage.googleapis.com/open-merchant-app-assets/media/89511f94-4cc9-44b0-b271-05f4dc057f0d/5a8b73cd-c572-4e00-b244-1461e861ee56/2%206x8%20%281%29%20%281%29.jpg",
+          "alt": "Pepperoni Detroit-style pizzas pictured by Square Pie Guys",
+          "source": "https://www.squarepieguys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r53",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Square Pie Guys website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r54",
@@ -2011,7 +2261,19 @@
         37.9074777
       ],
       "address": "Pringle Avenue Walnut Creek California 94596",
-      "photo": null,
+      "photo": {
+        "url": "https://img.getopen.com/cdn-cgi/image/width=2048,fit=cover,format=auto,quality=85/https://storage.googleapis.com/open-merchant-app-assets/media/89511f94-4cc9-44b0-b271-05f4dc057f0d/5a8b73cd-c572-4e00-b244-1461e861ee56/2%206x8%20%281%29%20%281%29.jpg",
+        "alt": "Pepperoni Detroit-style pizzas pictured by Square Pie Guys",
+        "source": "https://www.squarepieguys.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r54",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Square Pie Guys website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2021,7 +2283,23 @@
       "locationSource": "https://www.openstreetmap.org/node/13670541260",
       "coordinateSource": "https://www.openstreetmap.org/node/13670541260",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://img.getopen.com/cdn-cgi/image/width=2048,fit=cover,format=auto,quality=85/https://storage.googleapis.com/open-merchant-app-assets/media/89511f94-4cc9-44b0-b271-05f4dc057f0d/5a8b73cd-c572-4e00-b244-1461e861ee56/2%206x8%20%281%29%20%281%29.jpg",
+          "alt": "Pepperoni Detroit-style pizzas pictured by Square Pie Guys",
+          "source": "https://www.squarepieguys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r54",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Square Pie Guys website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r55",
@@ -2038,7 +2316,19 @@
         37.8992619
       ],
       "address": "1394 North Main Street Walnut Creek California 94596",
-      "photo": null,
+      "photo": {
+        "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando-combo.avif",
+        "alt": "Fried chicken sandwich and fries pictured by HOTBOYS",
+        "source": "https://worldfamoushotboys.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r55",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "HOTBOYS website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2048,7 +2338,36 @@
       "locationSource": "https://www.openstreetmap.org/way/131662712",
       "coordinateSource": "https://www.openstreetmap.org/way/131662712",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando-combo.avif",
+          "alt": "Fried chicken sandwich and fries pictured by HOTBOYS",
+          "source": "https://worldfamoushotboys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r55",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "HOTBOYS website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://worldfamoushotboys.s3.amazonaws.com/foods/sando.avif",
+          "alt": "Fried chicken sandwich pictured by HOTBOYS",
+          "source": "https://worldfamoushotboys.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r55",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "HOTBOYS website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r56",
@@ -2094,7 +2413,19 @@
         37.802605
       ],
       "address": "201 Halleck St San Francisco CA 94129",
-      "photo": null,
+      "photo": {
+        "url": "https://presidio.gov/_next/image?url=https%3A%2F%2Fwp.presidio.gov%2Fwp-content%2Fuploads%2F2026%2F08%2FThe-Mess-Hall_Breadwinner_credit-Erin-Ng.jpg&w=3840&q=75",
+        "alt": "Burger, sandwiches, and sides at The Mess Hall",
+        "source": "https://presidio.gov/explore/attractions/the-mess-hall",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r57",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Erin Ng / The Presidio",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2104,7 +2435,49 @@
       "locationSource": "https://presidio.gov/explore/attractions/the-mess-hall",
       "coordinateSource": "https://presidio.gov/explore/attractions/the-mess-hall",
       "locationNote": "Coordinates published by the Presidio in its restaurant location record.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://presidio.gov/_next/image?url=https%3A%2F%2Fwp.presidio.gov%2Fwp-content%2Fuploads%2F2026%2F08%2FThe-Mess-Hall_Breadwinner_credit-Erin-Ng.jpg&w=3840&q=75",
+          "alt": "Burger, sandwiches, and sides at The Mess Hall",
+          "source": "https://presidio.gov/explore/attractions/the-mess-hall",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r57",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Erin Ng / The Presidio",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://presidio.gov/_next/image?url=https%3A%2F%2Fwp.presidio.gov%2Fwp-content%2Fuploads%2F2026%2F08%2FThe-Mess-Hall_Dayboat-Seafood_credit-Erin-Ng-1.jpg&w=3840&q=75",
+          "alt": "Seafood and oysters at The Mess Hall",
+          "source": "https://presidio.gov/explore/attractions/the-mess-hall",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r57",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Erin Ng / The Presidio",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://presidio.gov/_next/image?url=https%3A%2F%2Fwp.presidio.gov%2Fwp-content%2Fuploads%2F2026%2F08%2FThe-Mess-Hall_Boda-Korean_credit-Erin-Ng.jpg&w=3840&q=75",
+          "alt": "Korean food at The Mess Hall",
+          "source": "https://presidio.gov/explore/attractions/the-mess-hall",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r57",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "Erin Ng / The Presidio",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r58",
@@ -2121,7 +2494,19 @@
         37.858420762785
       ],
       "address": "46 Caledonia St Sausalito CA",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/636aa81f1c9ae84bcc555cc2/1673213067917-O5YRTUSPN6Z0KYVOI91H/poke+2500px.jpg?format=1000w",
+        "alt": "Poke pictured by Gilligans Poke Shop",
+        "source": "https://www.gilliganspokeshop.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r58",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Gilligans Poke Shop website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2131,7 +2516,36 @@
       "locationSource": "https://www.gilliganspokeshop.com/new-page",
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=46+Caledonia+St+Sausalito+CA&benchmark=4&format=json",
       "locationNote": "Published branch address geocoded to an approximate street position; entrance not verified.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/636aa81f1c9ae84bcc555cc2/1673213067917-O5YRTUSPN6Z0KYVOI91H/poke+2500px.jpg?format=1000w",
+          "alt": "Poke pictured by Gilligans Poke Shop",
+          "source": "https://www.gilliganspokeshop.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r58",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Gilligans Poke Shop website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/636aa81f1c9ae84bcc555cc2/1673213569861-OMB35MSJB2RJMYJ0TQ3C/POKE+2.jpg?format=1000w",
+          "alt": "Fresh poke pictured by Gilligans Poke Shop",
+          "source": "https://www.gilliganspokeshop.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r58",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Gilligans Poke Shop website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r59",
@@ -2167,7 +2581,19 @@
         37.4473449
       ],
       "address": "403 University Avenue Palo Alto California 94301",
-      "photo": null,
+      "photo": {
+        "url": "https://static.wixstatic.com/media/e6d2be_b84ed9bdd2d84372bcc645d139ccfb6b~mv2.jpg",
+        "alt": "Katsu curry pictured by YAYOI US",
+        "source": "https://www.yayoi-us.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r60",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "YAYOI US website · brand menu photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2177,7 +2603,49 @@
       "locationSource": "https://www.openstreetmap.org/way/132883470",
       "coordinateSource": "https://www.openstreetmap.org/way/132883470",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://static.wixstatic.com/media/e6d2be_b84ed9bdd2d84372bcc645d139ccfb6b~mv2.jpg",
+          "alt": "Katsu curry pictured by YAYOI US",
+          "source": "https://www.yayoi-us.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r60",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "YAYOI US website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e6d2be_a896df20c2b04c4e92fcf215dd7281ce~mv2.jpg",
+          "alt": "Sukiyaki pictured by YAYOI US",
+          "source": "https://www.yayoi-us.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r60",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "YAYOI US website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e6d2be_7dc46dc15d9348a0aad929a0e26e1790~mv2.jpg",
+          "alt": "Beef rice bowl pictured by YAYOI US",
+          "source": "https://www.yayoi-us.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r60",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "YAYOI US website · brand menu photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r61",
@@ -2222,7 +2690,19 @@
         37.4440203
       ],
       "address": "150 University Avenue Palo Alto California 94301",
-      "photo": null,
+      "photo": {
+        "url": "https://popmenucloud.com/cdn-cgi/image/width=1200,height=1200,fit=scale-down,format=auto,quality=60/vibodwzr/ae9a793f-c3ca-4e61-b2cb-192205b13064.jpg",
+        "alt": "Fruit-topped pancakes pictured on Sweet Maple’s Palo Alto menu",
+        "source": "https://www.sweetmaplesf.com/menu-palo-alto",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r62",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Sweet Maple Palo Alto menu",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2232,7 +2712,23 @@
       "locationSource": "https://www.openstreetmap.org/node/13412735418",
       "coordinateSource": "https://www.openstreetmap.org/node/13412735418",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://popmenucloud.com/cdn-cgi/image/width=1200,height=1200,fit=scale-down,format=auto,quality=60/vibodwzr/ae9a793f-c3ca-4e61-b2cb-192205b13064.jpg",
+          "alt": "Fruit-topped pancakes pictured on Sweet Maple’s Palo Alto menu",
+          "source": "https://www.sweetmaplesf.com/menu-palo-alto",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r62",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Sweet Maple Palo Alto menu",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r63",
@@ -2249,7 +2745,19 @@
         37.4390706
       ],
       "address": "855 El Camino Real Suite 151 Palo Alto CA 94301",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/56df9cfd37013bed3490756b/bf38674e-5fec-4905-9b0b-1f1e02d69aec/IMG_8976.jpg?format=1000w",
+        "alt": "Food and a cocktail pictured on Horsefeather’s Palo Alto menu",
+        "source": "https://horsefeather.com/pa/menu",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r63",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Horsefeather Palo Alto website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2259,7 +2767,23 @@
       "locationSource": "https://horsefeather.com/pa/contact",
       "coordinateSource": "https://www.openstreetmap.org/node/2697975501",
       "locationNote": "Pin at the published street address for Town & Country Village; suite entrance is approximate.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/56df9cfd37013bed3490756b/bf38674e-5fec-4905-9b0b-1f1e02d69aec/IMG_8976.jpg?format=1000w",
+          "alt": "Food and a cocktail pictured on Horsefeather’s Palo Alto menu",
+          "source": "https://horsefeather.com/pa/menu",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r63",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Horsefeather Palo Alto website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r64",
@@ -2459,7 +2983,19 @@
         34.053244733587
       ],
       "address": "900 S Barrington Ave Los Angeles CA",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+        "alt": "Bagel sandwiches pictured by Layla Bagels",
+        "source": "https://www.laylabagels.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r71",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Jakob Layman / Layla Bagels · brand photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2469,7 +3005,23 @@
       "locationSource": "https://www.laylabagels.com/",
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=900+S+Barrington+Ave+Los+Angeles+CA&benchmark=4&format=json",
       "locationNote": "Published branch address geocoded to an approximate street position; entrance not verified.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+          "alt": "Bagel sandwiches pictured by Layla Bagels",
+          "source": "https://www.laylabagels.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r71",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Jakob Layman / Layla Bagels · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r72",
@@ -2486,7 +3038,19 @@
         34.063460994151
       ],
       "address": "233 S Beverly Dr Beverly Hills CA",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+        "alt": "Bagel sandwiches pictured by Layla Bagels",
+        "source": "https://www.laylabagels.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r72",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Jakob Layman / Layla Bagels · brand photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2496,7 +3060,23 @@
       "locationSource": "https://www.laylabagels.com/",
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=233+S+Beverly+Dr+Beverly+Hills+CA&benchmark=4&format=json",
       "locationNote": "Published branch address geocoded to an approximate street position; entrance not verified.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+          "alt": "Bagel sandwiches pictured by Layla Bagels",
+          "source": "https://www.laylabagels.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r72",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Jakob Layman / Layla Bagels · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r73",
@@ -2513,7 +3093,19 @@
         34.0116228
       ],
       "address": "Ocean Park Boulevard Santa Monica California 90405",
-      "photo": null,
+      "photo": {
+        "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+        "alt": "Bagel sandwiches pictured by Layla Bagels",
+        "source": "https://www.laylabagels.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r73",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Jakob Layman / Layla Bagels · brand photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2523,7 +3115,23 @@
       "locationSource": "https://www.openstreetmap.org/node/10924950147",
       "coordinateSource": "https://www.openstreetmap.org/node/10924950147",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/633f01e131767c231cc5db60/e2ef451c-6c7d-4de7-b99b-1d1b135eab01/JakobLayman.1024.LaylaBagels_290+%281%29.jpg?format=1000w",
+          "alt": "Bagel sandwiches pictured by Layla Bagels",
+          "source": "https://www.laylabagels.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r73",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Jakob Layman / Layla Bagels · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r74",
@@ -2539,7 +3147,19 @@
         33.1947565
       ],
       "address": "121 North Cleveland Street Oceanside California 92054",
-      "photo": null,
+      "photo": {
+        "url": "https://static.wixstatic.com/media/da4cfe_15cdb0532bb249a488967e00806f09c9%7Emv2.png",
+        "alt": "Pizza and sides pictured by Odie’s Pizza Co.",
+        "source": "https://www.odiespizza.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r74",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Odie’s Pizza Co. website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2549,7 +3169,36 @@
       "locationSource": "https://www.openstreetmap.org/node/13479788846",
       "coordinateSource": "https://www.openstreetmap.org/node/13479788846",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://static.wixstatic.com/media/da4cfe_15cdb0532bb249a488967e00806f09c9%7Emv2.png",
+          "alt": "Pizza and sides pictured by Odie’s Pizza Co.",
+          "source": "https://www.odiespizza.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r74",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Odie’s Pizza Co. website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/da4cfe_79630749f14c41218a88a31a83e7b14b~mv2.png",
+          "alt": "Pepperoni pizza pictured by Odie’s Pizza Co.",
+          "source": "https://www.odiespizza.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r74",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Odie’s Pizza Co. website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r75",
@@ -2565,7 +3214,19 @@
         32.754057676299
       ],
       "address": "5142 W Point Loma Blvd San Diego CA",
-      "photo": null,
+      "photo": {
+        "url": "https://static.wixstatic.com/media/b83b94_1b7aafe709294025bf1e0044242b540e~mv2.jpg",
+        "alt": "Breakfast sandwich and potatoes at Benedict’s Brunch",
+        "source": "https://www.benedictsbrunch.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r75",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Benedict’s Brunch website",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2575,7 +3236,49 @@
       "locationSource": "https://www.grubhub.com/restaurant/benedicts-brunch-5142-w-point-loma-blvd-san-diego/12006920",
       "coordinateSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5142+W+Point+Loma+Blvd+San+Diego+CA&benchmark=4&format=json",
       "locationNote": "Published branch address geocoded to an approximate street position; entrance not verified.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://static.wixstatic.com/media/b83b94_1b7aafe709294025bf1e0044242b540e~mv2.jpg",
+          "alt": "Breakfast sandwich and potatoes at Benedict’s Brunch",
+          "source": "https://www.benedictsbrunch.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r75",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Benedict’s Brunch website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/b83b94_7991195487af4aa2bf7497bad2712a03~mv2.jpg",
+          "alt": "Strawberry French toast at Benedict’s Brunch",
+          "source": "https://www.benedictsbrunch.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r75",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Benedict’s Brunch website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/b83b94_ee7ed206eb664880871e2cd195b2631c~mv2.jpg",
+          "alt": "Eggs Benedict and potatoes at Benedict’s Brunch",
+          "source": "https://www.benedictsbrunch.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r75",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "Benedict’s Brunch website",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r76",
@@ -2591,7 +3294,19 @@
         40.7378039
       ],
       "address": "103 Greenwich Avenue New York New York 10014",
-      "photo": null,
+      "photo": {
+        "url": "https://images.getbento.com/accounts/d704d1f12e9025a5303f862eeb87f5c0/media/images/31406DonAngie_AlexStaniloff_111225-306.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.46&fp-y=0.52",
+        "alt": "Rolled lasagna pictured by Don Angie",
+        "source": "https://www.donangie.com/",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r76",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Alex Staniloff / Don Angie",
+        "scope": "location",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2601,7 +3316,49 @@
       "locationSource": "https://www.openstreetmap.org/node/4527086687",
       "coordinateSource": "https://www.openstreetmap.org/node/4527086687",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://images.getbento.com/accounts/d704d1f12e9025a5303f862eeb87f5c0/media/images/31406DonAngie_AlexStaniloff_111225-306.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.46&fp-y=0.52",
+          "alt": "Rolled lasagna pictured by Don Angie",
+          "source": "https://www.donangie.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r76",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Alex Staniloff / Don Angie",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.getbento.com/accounts/d704d1f12e9025a5303f862eeb87f5c0/media/images/91687DonAngie_AlexStaniloff_111225-275.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.5&fp-y=0.5",
+          "alt": "Pasta pictured by Don Angie",
+          "source": "https://www.donangie.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r76",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Alex Staniloff / Don Angie",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://images.getbento.com/accounts/d704d1f12e9025a5303f862eeb87f5c0/media/images/29742DonAngie_AlexStaniloff_111225-237.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&crop=focalpoint&fp-x=0.7&fp-y=0.44",
+          "alt": "A spread of dishes pictured by Don Angie",
+          "source": "https://www.donangie.com/",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r76",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "Alex Staniloff / Don Angie",
+          "scope": "location",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     },
     {
       "id": "r77",
@@ -2618,7 +3375,19 @@
         40.7335881
       ],
       "address": "84 University Place New York New York 10003",
-      "photo": null,
+      "photo": {
+        "url": "https://framerusercontent.com/images/LwoXkpOcV9TsWLZ9yTiTzZOGQ.jpg?width=2667&height=4000",
+        "alt": "Frozen yogurt with sauce pictured by Mimi’s",
+        "source": "https://mimis.nyc/story",
+        "subject": "food",
+        "verified": true,
+        "restaurantId": "r77",
+        "hero": true,
+        "editorialScore": 20,
+        "credit": "Mimi’s NYC website · brand photo",
+        "scope": "brand",
+        "checkedOn": "2026-10-23"
+      },
       "screenshotSource": {
         "kind": "user-screenshot",
         "batch": "2026-10-23",
@@ -2628,7 +3397,49 @@
       "locationSource": "https://www.openstreetmap.org/node/13977762764",
       "coordinateSource": "https://www.openstreetmap.org/node/13977762764",
       "locationNote": "OpenStreetMap restaurant location matched to saved branch and city.",
-      "checkedOn": "2026-10-23"
+      "checkedOn": "2026-10-23",
+      "photos": [
+        {
+          "url": "https://framerusercontent.com/images/LwoXkpOcV9TsWLZ9yTiTzZOGQ.jpg?width=2667&height=4000",
+          "alt": "Frozen yogurt with sauce pictured by Mimi’s",
+          "source": "https://mimis.nyc/story",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r77",
+          "hero": true,
+          "editorialScore": 20,
+          "credit": "Mimi’s NYC website · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://framerusercontent.com/images/j2yHmFUTJTdZiciyE46F3rM5Wg.jpg?width=2667&height=2667",
+          "alt": "Frozen yogurt cups pictured by Mimi’s",
+          "source": "https://mimis.nyc/story",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r77",
+          "hero": false,
+          "editorialScore": 19,
+          "credit": "Mimi’s NYC website · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        },
+        {
+          "url": "https://framerusercontent.com/images/v9nOlji3iCnXmORZNhjylG9yJxk.jpg?width=2667&height=4000",
+          "alt": "Fruit-topped frozen yogurt pictured by Mimi’s",
+          "source": "https://mimis.nyc/story",
+          "subject": "food",
+          "verified": true,
+          "restaurantId": "r77",
+          "hero": false,
+          "editorialScore": 18,
+          "credit": "Mimi’s NYC website · brand photo",
+          "scope": "brand",
+          "checkedOn": "2026-10-23"
+        }
+      ],
+      "photoResearchStatus": "Source and food content visually checked; external image availability may change."
     }
   ]
 }
@@ -2640,7 +3451,7 @@ window.SAVED_TABLE_CLOUD = { url: 'https://ndfmbinqxsdlemtxfhdz.supabase.co', pu
 let publicPlaces=[],collectionMode='kristina',accountUser=null,accountClient=null,accountLoading=false,accountLoadFailed=false;
 function personalScope(){return accountUser?'saved-table-user-'+accountUser.id:'saved-table-custom-places-v1';}
 function validPersonalRecord(r){return r&&typeof r.id==='string'&&typeof r.name==='string'&&typeof r.city==='string'&&typeof r.neighborhood==='string'&&Array.isArray(r.categories)&&r.categories.every(c=>typeof c==='string')&&Number.isInteger(r.priceTier)&&r.priceTier>=0&&r.priceTier<=4;}
-function restoredPlaceLocation(row){if(validCoordinates(row.coordinates))return row;const n=s=>String(s||'').normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');const known=publicPlaces.find(p=>validCoordinates(p.coordinates)&&(p.id===row.sourceRecordId||p.id===row.id||(n(p.name)===n(row.name)&&n(p.city)===n(row.city)&&n(p.neighborhood)===n(row.neighborhood))));return known?{...row,coordinates:[...known.coordinates],address:known.address,locationSource:known.locationSource,coordinateSource:known.coordinateSource,locationNote:known.locationNote}:row;}
+function restoredPlaceLocation(row){const n=s=>String(s||'').normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');const known=publicPlaces.find(p=>p.id===row.sourceRecordId||p.id===row.id||(n(p.name)===n(row.name)&&n(p.city)===n(row.city)&&n(p.neighborhood)===n(row.neighborhood)));if(!known)return row;let next=row;if(!validCoordinates(row.coordinates)&&validCoordinates(known.coordinates))next={...next,coordinates:[...known.coordinates],address:known.address,locationSource:known.locationSource,coordinateSource:known.coordinateSource,locationNote:known.locationNote};if(!row.photo&&!(row.photos||[]).length&&(known.photo||(known.photos||[]).length)){const copyPhoto=p=>({...p,restaurantId:row.id});next={...next,photo:known.photo?copyPhoto(known.photo):null,photos:(known.photos||[]).map(copyPhoto)};}return next;}
 function collectionRows(){return collectionMode==='kristina'?publicPlaces:customPlaces.map(restoredPlaceLocation);}
 function applyCollection(clearFilters=true){records=collectionRows();rebuildFilterOptions();if(clearFilters){for(const k of ['city','neighborhood','cuisine','price','search']){state[k]='';$(k).value='';}state.selected=null;}render();save();fitPlaces();}
 function switchCollection(mode){if(!['kristina','mine'].includes(mode))return;collectionMode=mode;applyCollection();}
@@ -2660,7 +3471,7 @@ function safeImageUrl(s){try{const u=new URL(s);return u.protocol==='https:'||(/
 function safeSource(s){try{return new URL(s).protocol==='https:';}catch{return false;}}
 function loadPersonalPlaces(){try{const o=JSON.parse(localStorage.getItem(photoOverridesKey)||'{}');if(o&&typeof o==='object'&&!Array.isArray(o))photoOverrides=o;}catch{}try{const p=JSON.parse(localStorage.getItem(customPlacesKey)||'[]');if(Array.isArray(p))customPlaces=p.filter(r=>typeof r.id==='string'&&typeof r.name==='string'&&Array.isArray(r.categories)&&r.categories.every(c=>typeof c==='string')&&typeof r.neighborhood==='string'&&Number.isInteger(r.priceTier)&&r.priceTier>=0&&r.priceTier<=4).map(r=>({...r,categories:r.categories.filter(c=>c!=='Cuisine not specified'),coordinates:validCoordinates(r.coordinates)?r.coordinates:null}));}catch{}}
 function photoCandidates(r){const o=collectionMode==='mine'?photoOverrides[r.id]:null;const candidates=[...(o?[o]:[]),...(Array.isArray(r.photos)?r.photos:[]),...(r.photo?[{...r.photo,subject:r.photo.subject||'food',verified:r.photo.verified===true}]:[])];const seen=new Set();return candidates.filter(p=>p&&safeImageUrl(p.url)&&p.verified===true&&['food','drink'].includes(p.subject)&&(!p.restaurantId||p.restaurantId===r.id)).filter(p=>{if(seen.has(p.url))return false;seen.add(p.url);return true;}).sort((a,b)=>{const score=p=>(p===o?1000:0)+(p.subject==='food'?100:70)+(p.hero===true?30:0)+Math.max(0,Math.min(20,Number(p.editorialScore)||0));return score(b)-score(a);});}
-function photoElement(r,className='art'){const box=tag('div',className);const fallback=tag('div','photo-fallback');const title=tag('span');title.textContent=r.categories[0]||'Saved place';const note=tag('small');note.textContent='Add a food photo';fallback.append(title,note);box.append(fallback);const credit=tag('small','photo-credit');credit.hidden=true;box.append(credit);const candidates=photoCandidates(r);let index=0;function tryNext(){if(index>=candidates.length)return;const p=candidates[index++],im=tag('img');im.alt=p.alt||'Food at '+r.name;im.loading='lazy';im.decoding='async';im.referrerPolicy='strict-origin-when-cross-origin';im.onload=()=>{fallback.hidden=true;credit.textContent=p.credit||'Photo selected for '+r.name;credit.hidden=false;};im.onerror=()=>{im.remove();fallback.hidden=false;credit.hidden=true;tryNext();};im.src=p.url;box.append(im);}tryNext();return box;}
+function photoElement(r,className='art'){const box=tag('div',className);const fallback=tag('div','photo-fallback');const title=tag('span');title.textContent=r.categories[0]||'Saved place';const note=tag('small');note.textContent='Add a food photo';fallback.append(title,note);box.append(fallback);const credit=tag('small','photo-credit');credit.hidden=true;box.append(credit);const candidates=photoCandidates(r);let index=0;function tryNext(){if(index>=candidates.length)return;const p=candidates[index++],im=tag('img');im.alt=p.alt||'Food at '+r.name;im.loading='lazy';im.decoding='async';im.referrerPolicy='strict-origin-when-cross-origin';im.onload=()=>{fallback.hidden=true;credit.replaceChildren();const label=p.credit||'Photo selected for '+r.name;if(p.source&&safeSource(p.source)){const link=tag('a');link.textContent=label;link.href=p.source;link.target='_blank';link.rel='noopener noreferrer';credit.append(link);}else credit.textContent=label;credit.hidden=false;};im.onerror=()=>{im.remove();fallback.hidden=false;credit.hidden=true;tryNext();};im.src=p.url;box.append(im);}tryNext();return box;}
 async function filePhoto(file){if(!file.type.startsWith('image/')||file.size>12*1024*1024)throw Error('Choose an image under 12 MB.');const url=await new Promise((resolve,reject)=>{const f=new FileReader();f.onload=()=>resolve(f.result);f.onerror=reject;f.readAsDataURL(file);});const img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(Error('This image format could not be opened. Try JPEG or PNG.'));i.src=url;});const scale=Math.min(1,1200/img.width,1200/img.height),canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);return canvas.toDataURL('image/jpeg',0.82);}
 function openPhotoEditor(r){$('photoId').value=r.id;$('photoTitle').textContent='Food photo · '+r.name;$('photoUrl').value='';$('photoSource').value='';$('photoFile').value='';$('photoError').textContent='';$('photoDialog').showModal();}
 async function savePhoto(e){e.preventDefault();const id=$('photoId').value,r=records.find(x=>x.id===id);if(!r||collectionMode!=='mine')return;try{const f=$('photoFile').files[0];const url=f?await filePhoto(f):$('photoUrl').value.trim();if(!safeImageUrl(url))throw Error('Upload a photo or enter an HTTPS image URL.');const source=$('photoSource').value.trim();if(source&&!safeSource(source))throw Error('Use an HTTPS source link.');const p={url,source:source||null,alt:'Food photo selected for '+r.name,subject:'food',verified:true,restaurantId:id,hero:true};const next=customPlaces.map(item=>item.id===id?{...item,photo:p}:item);await persistPersonalPlaces(next);records=collectionRows();render();showMapSelection(r,false);$('photoDialog').close();$('notice').textContent='Photo saved in this browser.';}catch(err){$('photoError').textContent=err.message||'Photo could not save. Browser storage may be full.';}}
